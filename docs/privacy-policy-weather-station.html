@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -126,12 +126,13 @@
   </header>
 
   <main>
-    <span class="small">Last update: 2026-03-10</span>
+    <span class="small">Last update: 2026-03-24</span>
     <div class="card">
       <strong>Important:</strong> WXStation Connect does not collect personal data. It requires a Weather Underground
       API key provided by the user to function — without it, no data can be retrieved. The key is stored only on the
       user's device and is never accessible by the developer. All connections go directly from the device to the
-      Weather Underground API; there is no proprietary server or backend.
+      Weather Underground API using HTTPS/TLS encryption; there is no proprietary server or backend. The app contains
+      no analytics, crash reporting, or advertising SDKs.
     </div>
 
     <h2>Languages</h2>
@@ -159,7 +160,7 @@
     <h3>2. Datos personales</h3>
     <ul>
       <li>No requiere registro ni cuenta.</li>
-      <li>No solicita nombre, email, teléfono ni ubicación personal del usuario.</li>
+      <li>No solicita nombre, e-mail, teléfono ni ubicación personal del usuario.</li>
       <li>No vende ni comparte datos personales.</li>
     </ul>
     <h3>3. API key y estaciones Weather Underground</h3>
@@ -168,8 +169,8 @@
       key se usa localmente en el dispositivo para el funcionamiento de la app y sus widgets, y nunca es accesible
       por el desarrollador.</p>
     <h3>4. Almacenamiento local</h3>
-    <p>La app guarda de forma local configuraciones como estaciones, unidades e idioma. No existe backend propio para
-      almacenar información del usuario.</p>
+    <p>La app guarda de forma local configuraciones como estaciones, unidades e idioma. No existe ningún servidor
+      propio donde se almacene información del usuario.</p>
     <h3>5. Terceros</h3>
     <p>Los datos meteorológicos son proporcionados por The Weather Company, LLC (Weather Underground) y están sujetos
       a sus propios términos y políticas. Los datos recibidos de la API no se almacenan en ningún servidor, ni se
@@ -177,7 +178,10 @@
       afiliada, respaldada ni patrocinada por Weather Underground ni por The Weather Company, LLC.</p>
     <p>La disponibilidad de los datos meteorológicos depende del servicio de API de Weather Underground, operado por
       un tercero ajeno al control del desarrollador. El desarrollador no se hace responsable de cualquier
-      interrupción, modificación o discontinuación de dicho servicio.</p>
+      interrupción, modificación o cese de dicho servicio.</p>
+    <h3>6. Seguridad de los datos</h3>
+    <p>Toda la comunicación entre la aplicación y el servicio de Weather Underground se realiza mediante cifrado
+      HTTPS/TLS. La API key y la configuración de estaciones se almacenan de forma segura en el propio dispositivo.</p>
 
     <!-- ═══════════════════ ENGLISH ═══════════════════ -->
     <h2 id="en-US">Privacy Policy (en-US)</h2>
@@ -195,8 +199,8 @@
       it, the app cannot retrieve any weather data and will not display any information. The API key is used locally
       on the device for app and widget functionality and is never accessible by the developer.</p>
     <h3>4. Local storage</h3>
-    <p>The app stores settings locally (stations, units, language). There is no proprietary backend collecting user
-      information.</p>
+    <p>The app stores settings locally (stations, units, language). There is no developer-owned server collecting
+      user information.</p>
     <h3>5. Third parties</h3>
     <p>Weather data is provided by The Weather Company, LLC (Weather Underground) and is subject to its own terms and
       privacy policies. Data received from the API is not stored on any server, sold, or redistributed in any form.
@@ -205,6 +209,9 @@
     <p>The availability of weather data depends on the Weather Underground API service, which is operated by a third
       party beyond the developer's control. The developer is not responsible for any interruption, modification, or
       discontinuation of that service.</p>
+    <h3>6. Data security</h3>
+    <p>All communication between the app and the Weather Underground service is encrypted using HTTPS/TLS. The API
+      key and station settings are stored securely on the device.</p>
 
     <!-- ═══════════════════ ČEŠTINA ═══════════════════ -->
     <h2 id="cs-CZ">Zásady ochrany osobních údajů (cs-CZ)</h2>
@@ -222,7 +229,7 @@
       něj aplikace nemůže načítat meteorologická data ani zobrazovat žádné informace. API klíč se používá lokálně na
       zařízení pro fungování aplikace a jejích widgetů a vývojář k němu nikdy nemá přístup.</p>
     <h3>4. Místní úložiště</h3>
-    <p>Aplikace ukládá lokálně nastavení jako stanice, jednotky a jazyk. Neexistuje žádný vlastní backend pro ukládání
+    <p>Aplikace ukládá lokálně nastavení jako stanice, jednotky a jazyk. Neexistuje žádný vlastní server pro ukládání
       informací o uživateli.</p>
     <h3>5. Třetí strany</h3>
     <p>Meteorologická data poskytuje společnost The Weather Company, LLC (Weather Underground) a podléhají jejím
@@ -231,6 +238,9 @@
       společností Weather Underground ani The Weather Company, LLC.</p>
     <p>Dostupnost meteorologických dat závisí na službě API Weather Underground, kterou provozuje třetí strana mimo
       kontrolu vývojáře. Vývojář nenese odpovědnost za jakékoli přerušení, úpravy nebo ukončení této služby.</p>
+    <h3>6. Zabezpečení dat</h3>
+    <p>Veškerá komunikace mezi aplikací a službou Weather Underground probíhá šifrovaně prostřednictvím HTTPS/TLS.
+      API klíč a nastavení stanic jsou bezpečně uloženy přímo v zařízení.</p>
 
     <!-- ═══════════════════ DANSK ═══════════════════ -->
     <h2 id="da-DK">Privatlivspolitik (da-DK)</h2>
@@ -248,8 +258,8 @@
       appen ikke hente vejrdata eller vise nogen information. API-nøglen bruges lokalt på enheden til app- og
       widget-funktionalitet og er aldrig tilgængelig for udvikleren.</p>
     <h3>4. Lokal lagring</h3>
-    <p>Appen gemmer indstillinger lokalt (stationer, enheder, sprog). Der er ingen proprietær backend, der indsamler
-      brugeroplysninger.</p>
+    <p>Appen gemmer indstillinger lokalt (stationer, enheder, sprog). Der er ingen server tilhørende udvikleren,
+      der indsamler brugeroplysninger.</p>
     <h3>5. Tredjeparter</h3>
     <p>Vejrdata leveres af The Weather Company, LLC (Weather Underground) og er underlagt dets egne vilkår og
       politikker. Modtagne data gemmes ikke på nogen server, sælges ikke og redistribueres ikke på nogen måde.
@@ -258,6 +268,9 @@
     <p>Tilgængeligheden af vejrdata afhænger af Weather Underground API-tjenesten, som drives af en tredjepart uden
       for udviklerens kontrol. Udvikleren er ikke ansvarlig for nogen afbrydelse, ændring eller ophør af denne
       tjeneste.</p>
+    <h3>6. Datasikkerhed</h3>
+    <p>Al kommunikation mellem appen og Weather Underground-tjenesten er krypteret med HTTPS/TLS. API-nøglen og
+      stationsindstillinger gemmes sikkert på selve enheden.</p>
 
     <!-- ═══════════════════ DEUTSCH ═══════════════════ -->
     <h2 id="de-DE">Datenschutzerklärung (de-DE)</h2>
@@ -275,16 +288,19 @@
       um zu funktionieren. Ohne ihn kann die App keine Wetterdaten abrufen und keine Informationen anzeigen. Der
       API-Schlüssel wird lokal auf dem Gerät verwendet und ist für den Entwickler zu keiner Zeit zugänglich.</p>
     <h3>4. Lokale Speicherung</h3>
-    <p>Einstellungen wie Stationen, Einheiten und Sprache werden lokal gespeichert. Es gibt kein eigenes Backend zur
-      Erfassung von Nutzerdaten.</p>
+    <p>Einstellungen wie Stationen, Einheiten und Sprache werden lokal gespeichert. Es gibt keinen eigenen Server
+      zur Erfassung von Nutzerdaten.</p>
     <h3>5. Dritte</h3>
     <p>Wetterdaten werden von The Weather Company, LLC (Weather Underground) bereitgestellt und unterliegen deren
       eigenen Richtlinien. Empfangene Daten werden nicht auf einem Server gespeichert, nicht verkauft und in keiner
-      Form weitergegeben. WXStation Connect ist eine unabhängige App und ist nicht mit Weather Underground oder The
-      Weather Company, LLC affiliiert, empfohlen oder gesponsert.</p>
+      Form weitergegeben. WXStation Connect ist eine unabhängige App und steht in keiner Verbindung zu Weather
+      Underground oder The Weather Company, LLC; sie wird von diesen weder empfohlen noch gesponsert.</p>
     <p>Die Verfügbarkeit von Wetterdaten hängt vom Weather Underground API-Dienst ab, der von einem Drittanbieter
       außerhalb der Kontrolle des Entwicklers betrieben wird. Der Entwickler übernimmt keine Verantwortung für
       Unterbrechungen, Änderungen oder die Einstellung dieses Dienstes.</p>
+    <h3>6. Datensicherheit</h3>
+    <p>Die gesamte Kommunikation zwischen der App und dem Weather Underground-Dienst erfolgt verschlüsselt über
+      HTTPS/TLS. Der API-Schlüssel und die Stationseinstellungen werden sicher auf dem Gerät selbst gespeichert.</p>
 
     <!-- ═══════════════════ FRANÇAIS ═══════════════════ -->
     <h2 id="fr-FR">Politique de Confidentialité (fr-FR)</h2>
@@ -299,11 +315,11 @@
     </ul>
     <h3>3. Clé API et stations Weather Underground</h3>
     <p>WXStation Connect nécessite une clé API Weather Underground fournie par l'utilisateur lui-même pour fonctionner.
-      Sans elle, l'application ne peut pas récupérer de données météorologiques ni afficher aucune information. La
+      Sans elle, l'application ne peut pas récupérer de données météorologiques ni afficher d'informations. La
       clé API est utilisée localement sur l'appareil et n'est jamais accessible au développeur.</p>
     <h3>4. Stockage local</h3>
-    <p>L'application stocke localement les paramètres (stations, unités, langue). Aucun backend propriétaire ne collecte
-      des données utilisateur.</p>
+    <p>L'application stocke localement les paramètres (stations, unités, langue). Aucun serveur du développeur ne
+      collecte de données utilisateur.</p>
     <h3>5. Services tiers</h3>
     <p>Les données météorologiques sont fournies par The Weather Company, LLC (Weather Underground) et sont soumises
       à ses propres politiques. Les données reçues ne sont stockées sur aucun serveur, ni vendues ni redistribuées
@@ -312,6 +328,9 @@
     <p>La disponibilité des données météorologiques dépend du service API Weather Underground, exploité par un tiers
       indépendant du développeur. Le développeur n'est pas responsable de toute interruption, modification ou arrêt
       de ce service.</p>
+    <h3>6. Sécurité des données</h3>
+    <p>Toutes les communications entre l'application et le service Weather Underground sont chiffrées par HTTPS/TLS.
+      La clé API et les paramètres des stations sont stockés de manière sécurisée sur l'appareil lui-même.</p>
 
     <!-- ═══════════════════ ITALIANO ═══════════════════ -->
     <h2 id="it-IT">Informativa sulla Privacy (it-IT)</h2>
@@ -329,8 +348,8 @@
       essa, l'app non può recuperare dati meteorologici né visualizzare alcuna informazione. La API key viene usata
       localmente sul dispositivo e non è mai accessibile allo sviluppatore.</p>
     <h3>4. Archiviazione locale</h3>
-    <p>L'app salva localmente le impostazioni (stazioni, unità, lingua). Non esiste un backend proprietario che raccolga
-      informazioni utente.</p>
+    <p>L'app salva localmente le impostazioni (stazioni, unità, lingua). Non esiste alcun server dello sviluppatore
+      che raccolga informazioni sull'utente.</p>
     <h3>5. Terze parti</h3>
     <p>I dati meteorologici sono forniti da The Weather Company, LLC (Weather Underground) e sono soggetti alle sue
       politiche. I dati ricevuti non vengono archiviati su alcun server, né venduti né ridistribuiti in alcuna forma.
@@ -339,6 +358,9 @@
     <p>La disponibilità dei dati meteorologici dipende dal servizio API di Weather Underground, gestito da una terza
       parte al di fuori del controllo dello sviluppatore. Lo sviluppatore non è responsabile di eventuali
       interruzioni, modifiche o cessazioni di tale servizio.</p>
+    <h3>6. Sicurezza dei dati</h3>
+    <p>Tutte le comunicazioni tra l'app e il servizio Weather Underground sono cifrate tramite HTTPS/TLS. La API key
+      e le impostazioni delle stazioni sono conservate in modo sicuro sul dispositivo stesso.</p>
 
     <!-- ═══════════════════ NORSK ═══════════════════ -->
     <h2 id="nb-NO">Personvernregler (nb-NO)</h2>
@@ -356,7 +378,7 @@
       ikke appen hente værdata eller vise noen informasjon. API-nøkkelen brukes lokalt på enheten for app- og
       widget-funksjonalitet og er aldri tilgjengelig for utvikleren.</p>
     <h3>4. Lokal lagring</h3>
-    <p>Appen lagrer innstillinger lokalt (stasjoner, enheter, språk). Det finnes ingen egen backend som samler inn
+    <p>Appen lagrer innstillinger lokalt (stasjoner, enheter, språk). Det finnes ingen egen server som samler inn
       brukerinformasjon.</p>
     <h3>5. Tredjeparter</h3>
     <p>Værdata leveres av The Weather Company, LLC (Weather Underground) og er underlagt deres egne vilkår og
@@ -366,6 +388,9 @@
     <p>Tilgjengeligheten av værdata avhenger av Weather Underground API-tjenesten, som drives av en tredjepart utenfor
       utviklerens kontroll. Utvikleren er ikke ansvarlig for eventuelle avbrudd, endringer eller nedleggelse av denne
       tjenesten.</p>
+    <h3>6. Datasikkerhet</h3>
+    <p>All kommunikasjon mellom appen og Weather Underground-tjenesten er kryptert med HTTPS/TLS. API-nøkkelen og
+      stasjonsinnstillinger lagres sikkert på selve enheten.</p>
 
     <!-- ═══════════════════ NEDERLANDS ═══════════════════ -->
     <h2 id="nl-NL">Privacybeleid (nl-NL)</h2>
@@ -384,8 +409,8 @@
       API-sleutel wordt lokaal op het apparaat gebruikt voor app- en widgetfunctionaliteit en is nooit toegankelijk
       voor de ontwikkelaar.</p>
     <h3>4. Lokale opslag</h3>
-    <p>De app slaat instellingen lokaal op (stations, eenheden, taal). Er is geen eigen backend die gebruikersinformatie
-      verzamelt.</p>
+    <p>De app slaat instellingen lokaal op (stations, eenheden, taal). Er is geen eigen server die
+      gebruikersinformatie verzamelt.</p>
     <h3>5. Derden</h3>
     <p>Weergegevens worden geleverd door The Weather Company, LLC (Weather Underground) en zijn onderworpen aan hun
       eigen voorwaarden en beleid. Ontvangen gegevens worden niet opgeslagen op een server, niet verkocht en op geen
@@ -394,6 +419,9 @@
     <p>De beschikbaarheid van weergegevens is afhankelijk van de Weather Underground API-dienst, die wordt beheerd
       door een derde partij buiten de controle van de ontwikkelaar. De ontwikkelaar is niet verantwoordelijk voor
       eventuele onderbrekingen, wijzigingen of stopzetting van die dienst.</p>
+    <h3>6. Gegevensbeveiliging</h3>
+    <p>Alle communicatie tussen de app en de Weather Underground-dienst is versleuteld via HTTPS/TLS. De API-sleutel
+      en stationsinstellingen worden veilig opgeslagen op het apparaat zelf.</p>
 
     <!-- ═══════════════════ POLSKI ═══════════════════ -->
     <h2 id="pl-PL">Polityka Prywatności (pl-PL)</h2>
@@ -409,10 +437,10 @@
     <h3>3. Klucz API i stacje Weather Underground</h3>
     <p>WXStation Connect wymaga klucza API Weather Underground dostarczonego przez samego użytkownika, aby działać. Bez
       niego aplikacja nie może pobierać danych meteorologicznych ani wyświetlać żadnych informacji. Klucz API jest
-      używany lokalnie na urządzeniu do działania aplikacji i jej widgetów i nigdy nie jest dostępny dla dewelopera.</p>
+      używany lokalnie na urządzeniu do działania aplikacji i jej widgetów, a deweloper nigdy nie ma do niego dostępu.</p>
     <h3>4. Lokalne przechowywanie</h3>
-    <p>Aplikacja przechowuje lokalnie ustawienia takie jak stacje, jednostki i język. Nie istnieje żaden własny backend
-      do przechowywania informacji o użytkowniku.</p>
+    <p>Aplikacja przechowuje lokalnie ustawienia takie jak stacje, jednostki i język. Nie istnieje żaden własny
+      serwer do przechowywania informacji o użytkowniku.</p>
     <h3>5. Strony trzecie</h3>
     <p>Dane meteorologiczne są dostarczane przez The Weather Company, LLC (Weather Underground) i podlegają ich własnym
       warunkom i zasadom. Otrzymane dane nie są przechowywane na żadnym serwerze, nie są sprzedawane ani
@@ -421,6 +449,9 @@
     <p>Dostępność danych meteorologicznych zależy od usługi API Weather Underground, która jest obsługiwana przez
       podmiot zewnętrzny niezależny od dewelopera. Deweloper nie ponosi odpowiedzialności za jakiekolwiek przerwy,
       zmiany lub zaprzestanie świadczenia tej usługi.</p>
+    <h3>6. Bezpieczeństwo danych</h3>
+    <p>Cała komunikacja między aplikacją a serwisem Weather Underground jest szyfrowana przy użyciu HTTPS/TLS. Klucz
+      API i konfiguracja stacji są bezpiecznie przechowywane na samym urządzeniu.</p>
 
     <!-- ═══════════════════ PORTUGUÊS ═══════════════════ -->
     <h2 id="pt-PT">Política de Privacidade (pt-PT)</h2>
@@ -438,7 +469,7 @@
       ela, a aplicação não consegue obter dados meteorológicos nem apresentar qualquer informação. A chave API é
       utilizada localmente no dispositivo e nunca é acessível ao programador.</p>
     <h3>4. Armazenamento local</h3>
-    <p>A aplicação guarda localmente definições como estações, unidades e idioma. Não existe backend próprio para
+    <p>A aplicação guarda localmente definições como estações, unidades e idioma. Não existe servidor próprio para
       recolha de dados do utilizador.</p>
     <h3>5. Serviços de terceiros</h3>
     <p>Os dados meteorológicos são fornecidos pela The Weather Company, LLC (Weather Underground) e estão sujeitos às
@@ -447,7 +478,10 @@
       nem patrocinada pela Weather Underground nem pela The Weather Company, LLC.</p>
     <p>A disponibilidade dos dados meteorológicos depende do serviço de API do Weather Underground, operado por um
       terceiro alheio ao controlo do programador. O programador não se responsabiliza por qualquer interrupção,
-      alteração ou descontinuação desse serviço.</p>
+      alteração ou cessação desse serviço.</p>
+    <h3>6. Segurança dos dados</h3>
+    <p>Toda a comunicação entre a aplicação e o serviço Weather Underground é cifrada através de HTTPS/TLS. A chave
+      API e as configurações das estações são armazenadas de forma segura no próprio dispositivo.</p>
 
     <!-- ═══════════════════ SVENSKA ═══════════════════ -->
     <h2 id="sv-SE">Integritetspolicy (sv-SE)</h2>
@@ -465,7 +499,7 @@
       Utan den kan appen inte hämta väderdata eller visa någon information. API-nyckeln används lokalt på enheten för
       app- och widgetfunktionalitet och är aldrig tillgänglig för utvecklaren.</p>
     <h3>4. Lokal lagring</h3>
-    <p>Appen lagrar inställningar lokalt (stationer, enheter, språk). Det finns ingen egen backend som samlar in
+    <p>Appen lagrar inställningar lokalt (stationer, enheter, språk). Det finns ingen egen server som samlar in
       användarinformation.</p>
     <h3>5. Tredje parter</h3>
     <p>Väderdata tillhandahålls av The Weather Company, LLC (Weather Underground) och omfattas av deras egna villkor
@@ -475,6 +509,9 @@
     <p>Tillgängligheten av väderdata beror på Weather Underground API-tjänsten, som drivs av en tredje part utanför
       utvecklarens kontroll. Utvecklaren ansvarar inte för eventuella avbrott, ändringar eller nedläggning av den
       tjänsten.</p>
+    <h3>6. Datassäkerhet</h3>
+    <p>All kommunikation mellan appen och Weather Underground-tjänsten är krypterad med HTTPS/TLS. API-nyckeln och
+      stationsinställningarna lagras säkert på enheten själv.</p>
 
     <!-- ═══════════════════ TÜRKÇE ═══════════════════ -->
     <h2 id="tr-TR">Gizlilik Politikası (tr-TR)</h2>
@@ -493,16 +530,19 @@
       görüntüleyemez. API anahtarı, uygulama ve widget işlevselliği için cihazda yerel olarak kullanılır ve
       geliştirici tarafından hiçbir zaman erişilemez.</p>
     <h3>4. Yerel depolama</h3>
-    <p>Uygulama, istasyonlar, birimler ve dil gibi ayarları yerel olarak saklar. Kullanıcı bilgilerini toplayan özel bir
-      arka uç sunucu yoktur.</p>
+    <p>Uygulama, istasyonlar, birimler ve dil gibi ayarları yerel olarak saklar. Kullanıcı bilgilerini toplayan,
+      geliştiriciye ait herhangi bir sunucu bulunmamaktadır.</p>
     <h3>5. Üçüncü taraflar</h3>
     <p>Hava durumu verileri The Weather Company, LLC (Weather Underground) tarafından sağlanır ve kendi şartlarına ve
       politikalarına tabidir. Alınan veriler hiçbir sunucuda depolanmaz, satılmaz ve hiçbir şekilde yeniden
-      dağıtılmaz. WXStation Connect bağımsız bir uygulamadır ve Weather Underground veya The Weather Company, LLC
-      tarafından bağlı, onaylı veya desteklenen bir uygulama değildir.</p>
+      dağıtılmaz. WXStation Connect bağımsız bir uygulamadır ve Weather Underground ya da The Weather Company, LLC
+      ile resmi bir bağlantısı bulunmamaktadır; bu kuruluşlar tarafından onaylanmamış veya desteklenmemiştir.</p>
     <p>Hava durumu verilerinin kullanılabilirliği, geliştiricinin kontrolü dışında bir üçüncü taraf tarafından
       işletilen Weather Underground API hizmetine bağlıdır. Geliştirici, bu hizmetin herhangi bir kesintiye
       uğraması, değiştirilmesi veya sonlandırılması durumunda sorumluluk kabul etmez.</p>
+    <h3>6. Veri güvenliği</h3>
+    <p>Uygulama ile Weather Underground hizmeti arasındaki tüm iletişim HTTPS/TLS ile şifrelenir. API anahtarı ve
+      istasyon ayarları cihazın kendisinde güvenli şekilde saklanır.</p>
   </main>
   <footer>
     WXStation Connect &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; All rights reserved

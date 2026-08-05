@@ -171,12 +171,12 @@
   </header>
 
   <main>
-    <span class="small">Last update: 2026-06-24</span>
+    <span class="small">Last update: 2026-08-05</span>
     <div class="card">
       <strong>Important:</strong> WXStation Connect does not collect personal data. It requires a Weather Underground
       API key provided by the user to function — without it, no data can be retrieved. The key is stored only on the
       user's device and is never accessible by the developer. All connections go directly from the device to external
-      services (Weather Underground and Open-Meteo) using HTTPS/TLS encryption; there is no proprietary server or
+      services (Weather Underground, Open-Meteo, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
       backend. Firebase Analytics (Google) collects anonymous usage statistics and in-app purchase events for
       advertising attribution; this data is processed by Google under their own privacy policy.
     </div>
@@ -229,6 +229,11 @@
     <p>La detección del estado del cielo y los datos de calidad del aire se obtienen a través de la API de Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servicio meteorológico de código abierto. Solo se
       transmiten las coordenadas geográficas públicas de la estación; no se envía ningún dato personal.</p>
+    <p>Los datos de próximos eclipses solares y lunares se obtienen a través de la API OPALE del IMCCE – Observatoire de
+      Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). La comunicación es cifrada mediante HTTPS/TLS. En las
+      consultas de eclipses solares solo se transmiten las coordenadas geográficas públicas de la estación; en las
+      lunares no se envían coordenadas. Las respuestas se almacenan en caché localmente en el dispositivo. No se envían
+      datos personales ni API keys. WXStation Connect no está afiliada al IMCCE ni al Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) se emplea para recopilar estadísticas de uso anónimas y registrar eventos de
       compra con fines de atribución publicitaria. Dichos datos son procesados por Google conforme a su Política de
       Privacidad (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -273,6 +278,11 @@
     <p>Sky condition detection and air quality data are provided by the Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), an open-source weather service. Only the weather
       station's public geographic coordinates are transmitted; no personal data is sent.</p>
+    <p>Upcoming solar and lunar eclipse data is obtained through the OPALE API operated by IMCCE – Paris Observatory (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>). Communication is encrypted via HTTPS/TLS. For solar eclipses,
+      only the weather station's public geographic coordinates are transmitted; lunar eclipse queries do not send
+      coordinates. Responses are cached locally on the device. No personal data or API keys are sent. WXStation Connect
+      is not affiliated with IMCCE or the Paris Observatory.</p>
     <p>Firebase Analytics (Google) is used to collect anonymous usage statistics and register in-app purchase
       events for advertising attribution purposes. This data is processed by Google under their own Privacy Policy (<a
         href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -316,6 +326,11 @@
     <p>Detekce stavu oblohy a data o kvalitě ovzduší jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       meteorologickou službou s otevřeným zdrojovým kódem. Jsou
       přenášeny pouze veřejné zeměpisné souřadnice stanice; žádné osobní údaje nejsou odesílány.</p>
+    <p>Údaje o nadcházejících zatměních Slunce a Měsíce jsou získávány prostřednictvím rozhraní OPALE API provozovaného
+      IMCCE – Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Komunikace je šifrována
+      pomocí HTTPS/TLS. U slunečních zatmění jsou přenášeny pouze veřejné zeměpisné souřadnice stanice; u měsíčních
+      zatmění se souřadnice neodesílají. Odpovědi jsou ukládány do místní cache v zařízení. Nejsou odesílány žádné
+      osobní údaje ani API klíče. WXStation Connect není přidružena k IMCCE ani Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) slouží ke shromažďování anonymních statistik využití a registraci nákupů v
       aplikaci pro účely reklamní atribuce. Tato data jsou zpracovávána společností Google podle jejích vlastních Zásad
       ochrany soukromí (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -360,6 +375,11 @@
     <p>Vejrtilstandsregistrering og luftkvalitetsdata suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
       open-source vejrtjeneste. Kun vejrstationens offentlige
       geografiske koordinater overføres; der sendes ingen personlige data.</p>
+    <p>Data om kommende sol- og måneformørkelser hentes via OPALE API drevet af IMCCE – Observatoire de Paris (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikationen er krypteret via HTTPS/TLS. For
+      solformørkelser overføres kun vejrstationens offentlige geografiske koordinater; ved måneformørkelser sendes ingen
+      koordinater. Svar caches lokalt på enheden. Ingen personlige data eller API-nøgler sendes. WXStation Connect er
+      ikke tilknyttet IMCCE eller Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) benyttes til at indsamle anonyme brugsstatistikker og registrere køb i appen med
       henblik på reklamattribution. Disse data behandles af Google under deres egne privatlivspolitik (<a
         href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -405,6 +425,12 @@
         href="https://open-meteo.com">open-meteo.com</a>), einen Open-Source-Wetterdienst, bereitgestellt. Es werden nur die
       öffentlichen geografischen Koordinaten der Wetterstation übermittelt; personenbezogene Daten werden nicht
       gesendet.</p>
+    <p>Daten zu kommenden Sonnen- und Mondfinsternissen werden über die OPALE API des IMCCE – Observatoire de Paris (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>) bezogen. Die Kommunikation erfolgt verschlüsselt über HTTPS/TLS.
+      Bei Sonnenfinsternissen werden nur die öffentlichen geografischen Koordinaten der Wetterstation übermittelt; bei
+      Mondfinsternissen werden keine Koordinaten gesendet. Antworten werden lokal auf dem Gerät zwischengespeichert. Es
+      werden keine personenbezogenen Daten oder API-Schlüssel gesendet. WXStation Connect ist weder mit dem IMCCE noch mit
+      dem Observatoire de Paris verbunden.</p>
     <p>Firebase Analytics (Google) wird zur Erfassung anonymer Nutzungsstatistiken und zur Registrierung von
       In-App-Käufen für Zwecke der Werbe-Attribution eingesetzt. Diese Daten werden von Google gemäß deren eigener
       Datenschutzrichtlinie verarbeitet (<a
@@ -451,6 +477,12 @@
     <p>La détection de l'état du ciel et les données de qualité de l'air sont fournies par l'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un service météorologique open-source. Seules les
       coordonnées géographiques publiques de la station sont transmises ; aucune donnée personnelle n'est envoyée.</p>
+    <p>Les données sur les prochaines éclipses solaires et lunaires sont obtenues via l'API OPALE exploitée par l'IMCCE –
+      Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Les communications sont chiffrées par
+      HTTPS/TLS. Pour les éclipses solaires, seules les coordonnées géographiques publiques de la station sont
+      transmises ; pour les éclipses lunaires, aucune coordonnée n'est envoyée. Les réponses sont mises en cache
+      localement sur l'appareil. Aucune donnée personnelle ni clé API n'est transmise. WXStation Connect n'est pas
+      affiliée à l'IMCCE ni à l'Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) est utilisé pour collecter des statistiques d'utilisation anonymes et enregistrer
       des événements d'achat intégrés à des fins d'attribution publicitaire. Ces données sont traitées par Google
       conformément à leur propre Politique de confidentialité (<a
@@ -497,6 +529,11 @@
     <p>Il rilevamento delle condizioni del cielo e i dati sulla qualità dell'aria sono forniti dall'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servizio meteorologico open-source. Vengono trasmesse
       solo le coordinate geografiche pubbliche della stazione; non vengono inviati dati personali.</p>
+    <p>I dati sui prossimi eclissi solari e lunari sono ottenuti tramite l'API OPALE gestita dall'IMCCE – Observatoire de
+      Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Le comunicazioni sono cifrate tramite HTTPS/TLS. Per
+      le eclissi solari vengono trasmesse solo le coordinate geografiche pubbliche della stazione; per quelle lunari non
+      vengono inviate coordinate. Le risposte vengono memorizzate in cache locale sul dispositivo. Non vengono inviati
+      dati personali né API key. WXStation Connect non è affiliata all'IMCCE né all'Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) è utilizzato per raccogliere statistiche di utilizzo anonime e registrare eventi
       di acquisto in-app a fini di attribuzione pubblicitaria. Questi dati sono elaborati da Google in conformità con
       la propria Informativa sulla privacy (<a
@@ -542,6 +579,11 @@
     <p>Registrering av himmelforhold og luftkvalitetsdata suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       en open-source værtjeneste. Bare værstasjonens offentlige
       geografiske koordinater overføres; ingen personopplysninger sendes.</p>
+    <p>Data om kommende sol- og måneformørkelser hentes via OPALE API drevet av IMCCE – Observatoire de Paris (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikasjonen er kryptert via HTTPS/TLS. For
+      solformørkelser overføres kun værstasjonens offentlige geografiske koordinater; for måneformørkelser sendes ingen
+      koordinater. Svar mellomlagres lokalt på enheten. Ingen personopplysninger eller API-nøkler sendes. WXStation
+      Connect er ikke tilknyttet IMCCE eller Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) benyttes for å samle inn anonyme bruksstatistikker og registrere kjøpshendelser i
       appen for reklamattribusjonsformål. Disse dataene behandles av Google i henhold til deres egen personvernpolicy
       (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -587,6 +629,12 @@
     <p>Detectie van hemelomstandigheden en luchtkwaliteitsgegevens worden aangevuld door de Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), een open-source weerdienst. Alleen de openbare geografische
       coördinaten van het weerstation worden doorgegeven; er worden geen persoonlijke gegevens verzonden.</p>
+    <p>Gegevens over komende zons- en maansverduisteringen worden opgehaald via de OPALE API van IMCCE – Observatoire de
+      Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). De communicatie is versleuteld via HTTPS/TLS. Bij
+      zonsverduisteringen worden alleen de openbare geografische coördinaten van het weerstation doorgegeven; bij
+      maansverduisteringen worden geen coördinaten verzonden. Antwoorden worden lokaal in de cache op het apparaat
+      opgeslagen. Er worden geen persoonlijke gegevens of API-sleutels verzonden. WXStation Connect is niet verbonden met
+      IMCCE of Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) wordt gebruikt voor het verzamelen van anonieme gebruiksstatistieken en het
       registreren van in-app aankoopgebeurtenissen voor advertentie-attributiedoeleinden. Deze gegevens worden door
       Google verwerkt onder hun eigen privacybeleid (<a
@@ -634,6 +682,12 @@
     <p>Wykrywanie warunków nieba oraz dane dotyczące jakości powietrza są uzupełniane przez interfejs API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), meteorologiczną usługę open-source. Przesyłane są wyłącznie
       publiczne współrzędne geograficzne stacji; żadne dane osobowe nie są wysyłane.</p>
+    <p>Dane o nadchodzących zaćmieniach Słońca i Księżyca są pobierane za pośrednictwem API OPALE obsługiwanego przez
+      IMCCE – Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Komunikacja jest szyfrowana
+      przy użyciu HTTPS/TLS. W przypadku zaćmień słonecznych przesyłane są wyłącznie publiczne współrzędne geograficzne
+      stacji; w przypadku zaćmień księżycowych współrzędne nie są wysyłane. Odpowiedzi są buforowane lokalnie na
+      urządzeniu. Nie są przesyłane żadne dane osobowe ani klucze API. WXStation Connect nie jest powiązana z IMCCE ani
+      Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) służy do zbierania anonimowych statystyk użytkowania i rejestrowania zdarzeń
       zakupów w aplikacji w celu atrybucji reklamowej. Dane te są przetwarzane przez Google zgodnie z ich własną
       Polityką prywatności (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -679,6 +733,11 @@
     <p>A deteção das condições do céu e os dados de qualidade do ar são complementados pela API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), um serviço meteorológico open-source. Apenas as
       coordenadas geográficas públicas da estação são transmitidas; não são enviados dados pessoais.</p>
+    <p>Os dados sobre os próximos eclipses solares e lunares são obtidos através da API OPALE do IMCCE – Observatoire de
+      Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). A comunicação é cifrada através de HTTPS/TLS. Nos
+      eclipses solares, apenas as coordenadas geográficas públicas da estação são transmitidas; nos eclipses lunares não
+      são enviadas coordenadas. As respostas são armazenadas em cache localmente no dispositivo. Não são enviados dados
+      pessoais nem chaves API. O WXStation Connect não está afiliado ao IMCCE nem ao Observatoire de Paris.</p>
     <p>O Firebase Analytics (Google) é utilizado para recolher estatísticas de utilização anónimas e registar eventos
       de compra para fins de atribuição publicitária. Estes dados são processados pela Google ao abrigo da sua própria
       Política de Privacidade (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
@@ -724,6 +783,11 @@
     <p>Detektering av himmelsförhållanden och luftkvalitetsdata kompletteras av Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), en open-source vädertjänst. Endast väderstationens offentliga
       geografiska koordinater överförs; inga personuppgifter skickas.</p>
+    <p>Data om kommande sol- och månförmörkelser hämtas via OPALE API som drivs av IMCCE – Observatoire de Paris (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikationen krypteras via HTTPS/TLS. För
+      solförmörkelser överförs endast väderstationens offentliga geografiska koordinater; för månförmörkelser skickas
+      inga koordinater. Svar lagras lokalt i cache på enheten. Inga personuppgifter eller API-nycklar skickas.
+      WXStation Connect är inte knuten till IMCCE eller Observatoire de Paris.</p>
     <p>Firebase Analytics (Google) används för att samla in anonym användningsstatistik och registrera köphändelser i
       appen för reklamattribueringsändamål. Dessa data behandlas av Google enligt deras egen integritetspolicy (<a
         href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
@@ -768,6 +832,11 @@
     <p>Gökyüzü koşullarının tespiti ve hava kalitesi verileri, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>) ile desteklenmektedir. Yalnızca istasyonun herkese açık
       coğrafi koordinatları iletilmekte olup kişisel veri gönderilmemektedir.</p>
+    <p>Yaklaşan güneş ve ay tutulması verileri, IMCCE – Observatoire de Paris tarafından işletilen OPALE API (<a
+        href="https://opale.imcce.fr">opale.imcce.fr</a>) aracılığıyla elde edilir. İletişim HTTPS/TLS ile şifrelenir.
+      Güneş tutulmalarında yalnızca istasyonun herkese açık coğrafi koordinatları iletilir; ay tutulmalarında koordinat
+      gönderilmez. Yanıtlar cihazda yerel olarak önbelleğe alınır. Kişisel veri veya API anahtarı gönderilmez. WXStation
+      Connect, IMCCE veya Observatoire de Paris ile bağlantılı değildir.</p>
     <p>Firebase Analytics (Google), anonim kullanım istatistikleri toplamak ve reklam ilişkilendirme amaçlı uygulama
       içi satın alma etkinliklerini kaydetmek için kullanılmaktadır. Bu veriler Google tarafından kendi Gizlilik
       Politikası kapsamında işlenmektedir (<a

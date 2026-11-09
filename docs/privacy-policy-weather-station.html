@@ -171,12 +171,12 @@
   </header>
 
   <main>
-    <span class="small">Last update: 2026-08-05</span>
+    <span class="small">Last update: 2026-11-09</span>
     <div class="card">
       <strong>Important:</strong> WXStation Connect does not collect personal data. It requires a Weather Underground
       API key provided by the user to function — without it, no data can be retrieved. The key is stored only on the
       user's device and is never accessible by the developer. All connections go directly from the device to external
-      services (Weather Underground, Open-Meteo, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
+      services (Weather Underground, Open-Meteo, OpenStreetMap, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
       backend. Firebase Analytics (Google) collects anonymous usage statistics and in-app purchase events for
       advertising attribution; this data is processed by Google under their own privacy policy.
     </div>
@@ -226,9 +226,11 @@
     <p>La disponibilidad de los datos meteorológicos depende del servicio de API de Weather Underground, operado por
       un tercero ajeno al control del desarrollador. El desarrollador no se hace responsable de cualquier
       interrupción, modificación o cese de dicho servicio.</p>
-    <p>La detección del estado del cielo y los datos de calidad del aire se obtienen a través de la API de Open-Meteo (<a
+    <p>La detección del estado del cielo, los datos de calidad del aire y el buscador de localidades del mapa de estaciones se obtienen a través de la API de Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servicio meteorológico de código abierto. Solo se
-      transmiten las coordenadas geográficas públicas de la estación; no se envía ningún dato personal.</p>
+      transmiten las coordenadas geográficas públicas de la estación o el nombre de la localidad buscada; no se envía ningún dato personal ni la ubicación del dispositivo.</p>
+    <p>Al utilizar el mapa interactivo para buscar estaciones cercanas, las teselas cartográficas se cargan directamente desde los servidores de OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). La aplicación no solicita permisos de ubicación GPS ni envía la ubicación física del dispositivo.</p>
     <p>Los datos de próximos eclipses solares y lunares se obtienen a través de la API OPALE del IMCCE – Observatoire de
       Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). La comunicación es cifrada mediante HTTPS/TLS. En las
       consultas de eclipses solares solo se transmiten las coordenadas geográficas públicas de la estación; en las
@@ -275,9 +277,11 @@
     <p>The availability of weather data depends on the Weather Underground API service, which is operated by a third
       party beyond the developer's control. The developer is not responsible for any interruption, modification, or
       discontinuation of that service.</p>
-    <p>Sky condition detection and air quality data are provided by the Open-Meteo API (<a
+    <p>Sky condition detection, air quality data, and city search in the station discovery map are provided by the Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), an open-source weather service. Only the weather
-      station's public geographic coordinates are transmitted; no personal data is sent.</p>
+      station's public geographic coordinates or the searched locality name are transmitted; no personal data or device location is sent.</p>
+    <p>When using the interactive map to discover nearby stations, map tiles are loaded directly from OpenStreetMap servers (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). The app does not request GPS location permissions or send the device's physical location.</p>
     <p>Upcoming solar and lunar eclipse data is obtained through the OPALE API operated by IMCCE – Paris Observatory (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>). Communication is encrypted via HTTPS/TLS. For solar eclipses,
       only the weather station's public geographic coordinates are transmitted; lunar eclipse queries do not send
@@ -323,9 +327,11 @@
       společností Weather Underground ani The Weather Company, LLC.</p>
     <p>Dostupnost meteorologických dat závisí na službě API Weather Underground, kterou provozuje třetí strana mimo
       kontrolu vývojáře. Vývojář nenese odpovědnost za jakékoli přerušení, úpravy nebo ukončení této služby.</p>
-    <p>Detekce stavu oblohy a data o kvalitě ovzduší jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
+    <p>Detekce stavu oblohy, data o kvalitě ovzduší a vyhledávání měst v mapě stanic jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       meteorologickou službou s otevřeným zdrojovým kódem. Jsou
-      přenášeny pouze veřejné zeměpisné souřadnice stanice; žádné osobní údaje nejsou odesílány.</p>
+      přenášeny pouze veřejné zeměpisné souřadnice stanice nebo název hledané lokality; žádné osobní údaje ani poloha zařízení nejsou odesílány.</p>
+    <p>Při použití interaktivní mapy k vyhledávání okolních stanic se mapové dlaždice načítají přímo ze serverů OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). Aplikace nevyžaduje oprávnění k poloze GPS ani neodesílá fyzickou polohu zařízení.</p>
     <p>Údaje o nadcházejících zatměních Slunce a Měsíce jsou získávány prostřednictvím rozhraní OPALE API provozovaného
       IMCCE – Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Komunikace je šifrována
       pomocí HTTPS/TLS. U slunečních zatmění jsou přenášeny pouze veřejné zeměpisné souřadnice stanice; u měsíčních
@@ -372,9 +378,11 @@
     <p>Tilgængeligheden af vejrdata afhænger af Weather Underground API-tjenesten, som drives af en tredjepart uden
       for udviklerens kontrol. Udvikleren er ikke ansvarlig for nogen afbrydelse, ændring eller ophør af denne
       tjeneste.</p>
-    <p>Vejrtilstandsregistrering og luftkvalitetsdata suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
+    <p>Vejrtilstandsregistrering, luftkvalitetsdata og bysøgning på stationskortet suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
       open-source vejrtjeneste. Kun vejrstationens offentlige
-      geografiske koordinater overføres; der sendes ingen personlige data.</p>
+      geografiske koordinater eller det søgte bynavn overføres; der sendes ingen personlige data eller enhedsplacering.</p>
+    <p>Når det interaktive kort bruges til at finde nærliggende stationer, indlæses kortfelter direkte fra OpenStreetMaps servere (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). Appen anmoder ikke om GPS-placeringstilladelser og sender ikke enhedens fysiske placering.</p>
     <p>Data om kommende sol- og måneformørkelser hentes via OPALE API drevet af IMCCE – Observatoire de Paris (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikationen er krypteret via HTTPS/TLS. For
       solformørkelser overføres kun vejrstationens offentlige geografiske koordinater; ved måneformørkelser sendes ingen
@@ -421,10 +429,12 @@
     <p>Die Verfügbarkeit von Wetterdaten hängt vom Weather Underground API-Dienst ab, der von einem Drittanbieter
       außerhalb der Kontrolle des Entwicklers betrieben wird. Der Entwickler übernimmt keine Verantwortung für
       Unterbrechungen, Änderungen oder die Einstellung dieses Dienstes.</p>
-    <p>Die Erkennung des Himmelsbedeckungsgrades sowie Luftqualitätsdaten werden durch die Open-Meteo API (<a
+    <p>Die Erkennung des Himmelsbedeckungsgrades, Luftqualitätsdaten sowie die Ortssuche auf der Stationskarte werden durch die Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), einen Open-Source-Wetterdienst, bereitgestellt. Es werden nur die
-      öffentlichen geografischen Koordinaten der Wetterstation übermittelt; personenbezogene Daten werden nicht
+      öffentlichen geografischen Koordinaten der Wetterstation bzw. der gesuchte Ortsname übermittelt; personenbezogene Daten oder der Gerätestandort werden nicht
       gesendet.</p>
+    <p>Bei der Nutzung der interaktiven Karte zur Suche nach nahegelegenen Stationen werden die Kartenkacheln direkt von den Servern von OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>) geladen. Die App fordert keine GPS-Standortberechtigungen an und übermittelt nicht den physischen Standort des Geräts.</p>
     <p>Daten zu kommenden Sonnen- und Mondfinsternissen werden über die OPALE API des IMCCE – Observatoire de Paris (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>) bezogen. Die Kommunikation erfolgt verschlüsselt über HTTPS/TLS.
       Bei Sonnenfinsternissen werden nur die öffentlichen geografischen Koordinaten der Wetterstation übermittelt; bei
@@ -474,9 +484,11 @@
     <p>La disponibilité des données météorologiques dépend du service API Weather Underground, exploité par un tiers
       indépendant du développeur. Le développeur n'est pas responsable de toute interruption, modification ou arrêt
       de ce service.</p>
-    <p>La détection de l'état du ciel et les données de qualité de l'air sont fournies par l'API Open-Meteo (<a
+    <p>La détection de l'état du ciel, les données de qualité de l'air et la recherche de localités sur la carte des stations sont fournies par l'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un service météorologique open-source. Seules les
-      coordonnées géographiques publiques de la station sont transmises ; aucune donnée personnelle n'est envoyée.</p>
+      coordonnées géographiques publiques de la station ou le nom de la localité recherchée sont transmis ; aucune donnée personnelle ni localisation de l'appareil n'est envoyée.</p>
+    <p>Lors de l'utilisation de la carte interactive pour rechercher des stations à proximité, les tuiles cartographiques sont chargées directement depuis les serveurs d'OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). L'application ne demande aucune autorisation de localisation GPS et n'envoie pas la position physique de l'appareil.</p>
     <p>Les données sur les prochaines éclipses solaires et lunaires sont obtenues via l'API OPALE exploitée par l'IMCCE –
       Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Les communications sont chiffrées par
       HTTPS/TLS. Pour les éclipses solaires, seules les coordonnées géographiques publiques de la station sont
@@ -526,9 +538,11 @@
     <p>La disponibilità dei dati meteorologici dipende dal servizio API di Weather Underground, gestito da una terza
       parte al di fuori del controllo dello sviluppatore. Lo sviluppatore non è responsabile di eventuali
       interruzioni, modifiche o cessazioni di tale servizio.</p>
-    <p>Il rilevamento delle condizioni del cielo e i dati sulla qualità dell'aria sono forniti dall'API Open-Meteo (<a
-        href="https://open-meteo.com">open-meteo.com</a>), un servizio meteorologico open-source. Vengono trasmesse
-      solo le coordinate geografiche pubbliche della stazione; non vengono inviati dati personali.</p>
+    <p>Il rilevamento delle condizioni del cielo, i dati sulla qualità dell'aria e la ricerca di località nella mappa delle stazioni sono forniti dall'API Open-Meteo (<a
+        href="https://open-meteo.com">open-meteo.com</a>), un servizio meteorologico open-source. Vengono trasmessi
+      solo le coordinate geografiche pubbliche della stazione o il nome della località cercata; non vengono inviati dati personali né la posizione del dispositivo.</p>
+    <p>Quando si utilizza la mappa interattiva per cercare stazioni vicine, i tasselli cartografici vengono caricati direttamente dai server di OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). L'app non richiede autorizzazioni di posizione GPS né invia la posizione fisica del dispositivo.</p>
     <p>I dati sui prossimi eclissi solari e lunari sono ottenuti tramite l'API OPALE gestita dall'IMCCE – Observatoire de
       Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Le comunicazioni sono cifrate tramite HTTPS/TLS. Per
       le eclissi solari vengono trasmesse solo le coordinate geografiche pubbliche della stazione; per quelle lunari non
@@ -576,9 +590,11 @@
     <p>Tilgjengeligheten av værdata avhenger av Weather Underground API-tjenesten, som drives av en tredjepart utenfor
       utviklerens kontroll. Utvikleren er ikke ansvarlig for eventuelle avbrudd, endringer eller nedleggelse av denne
       tjenesten.</p>
-    <p>Registrering av himmelforhold og luftkvalitetsdata suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
+    <p>Registrering av himmelforhold, luftkvalitetsdata og bysøk i stasjonskartet suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       en open-source værtjeneste. Bare værstasjonens offentlige
-      geografiske koordinater overføres; ingen personopplysninger sendes.</p>
+      geografiske koordinater eller det søkte stedsnavnet overføres; ingen personopplysninger eller enhetsposisjon sendes.</p>
+    <p>Når det interaktive kartet brukes til å finne nærliggende stasjoner, lastes kartfliser direkte fra OpenStreetMaps servere (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). Appen ber ikke om GPS-posisjonstillatelser og sender ikke enhetens fysiske posisjon.</p>
     <p>Data om kommende sol- og måneformørkelser hentes via OPALE API drevet av IMCCE – Observatoire de Paris (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikasjonen er kryptert via HTTPS/TLS. For
       solformørkelser overføres kun værstasjonens offentlige geografiske koordinater; for måneformørkelser sendes ingen
@@ -626,9 +642,11 @@
     <p>De beschikbaarheid van weergegevens is afhankelijk van de Weather Underground API-dienst, die wordt beheerd
       door een derde partij buiten de controle van de ontwikkelaar. De ontwikkelaar is niet verantwoordelijk voor
       eventuele onderbrekingen, wijzigingen of stopzetting van die dienst.</p>
-    <p>Detectie van hemelomstandigheden en luchtkwaliteitsgegevens worden aangevuld door de Open-Meteo API (<a
+    <p>Detectie van hemelomstandigheden, luchtkwaliteitsgegevens en het zoeken naar plaatsen op de stationskaart worden aangevuld door de Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), een open-source weerdienst. Alleen de openbare geografische
-      coördinaten van het weerstation worden doorgegeven; er worden geen persoonlijke gegevens verzonden.</p>
+      coördinaten van het weerstation of de gezochte plaatsnaam worden doorgegeven; er worden geen persoonlijke gegevens of apparaatlocatie verzonden.</p>
+    <p>Bij het gebruik van de interactieve kaart om nabijgelegen stations te zoeken, worden kaarttegels rechtstreeks geladen vanaf de servers van OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). De app vraagt geen GPS-locatierechten en verzendt de fysieke locatie van het apparaat niet.</p>
     <p>Gegevens over komende zons- en maansverduisteringen worden opgehaald via de OPALE API van IMCCE – Observatoire de
       Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). De communicatie is versleuteld via HTTPS/TLS. Bij
       zonsverduisteringen worden alleen de openbare geografische coördinaten van het weerstation doorgegeven; bij
@@ -679,9 +697,11 @@
     <p>Dostępność danych meteorologicznych zależy od usługi API Weather Underground, która jest obsługiwana przez
       podmiot zewnętrzny niezależny od dewelopera. Deweloper nie ponosi odpowiedzialności za jakiekolwiek przerwy,
       zmiany lub zaprzestanie świadczenia tej usługi.</p>
-    <p>Wykrywanie warunków nieba oraz dane dotyczące jakości powietrza są uzupełniane przez interfejs API Open-Meteo (<a
+    <p>Wykrywanie warunków nieba, dane dotyczące jakości powietrza oraz wyszukiwanie miejscowości na mapie stacji są uzupełniane przez interfejs API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), meteorologiczną usługę open-source. Przesyłane są wyłącznie
-      publiczne współrzędne geograficzne stacji; żadne dane osobowe nie są wysyłane.</p>
+      publiczne współrzędne geograficzne stacji lub nazwa wyszukiwanej miejscowości; żadne dane osobowe ani lokalizacja urządzenia nie są wysyłane.</p>
+    <p>Podczas korzystania z interaktywnej mapy w celu wyszukiwania pobliskich stacji kafelki mapy są pobierane bezpośrednio z serwerów OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). Aplikacja nie prosi o uprawnienia do lokalizacji GPS ani nie przesyła fizycznej lokalizacji urządzenia.</p>
     <p>Dane o nadchodzących zaćmieniach Słońca i Księżyca są pobierane za pośrednictwem API OPALE obsługiwanego przez
       IMCCE – Observatoire de Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). Komunikacja jest szyfrowana
       przy użyciu HTTPS/TLS. W przypadku zaćmień słonecznych przesyłane są wyłącznie publiczne współrzędne geograficzne
@@ -730,9 +750,11 @@
     <p>A disponibilidade dos dados meteorológicos depende do serviço de API do Weather Underground, operado por um
       terceiro alheio ao controlo do programador. O programador não se responsabiliza por qualquer interrupção,
       alteração ou cessação desse serviço.</p>
-    <p>A deteção das condições do céu e os dados de qualidade do ar são complementados pela API Open-Meteo (<a
+    <p>A deteção das condições do céu, os dados de qualidade do ar e a pesquisa de localidades no mapa de estações são complementados pela API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), um serviço meteorológico open-source. Apenas as
-      coordenadas geográficas públicas da estação são transmitidas; não são enviados dados pessoais.</p>
+      coordenadas geográficas públicas da estação ou o nome da localidade pesquisada são transmitidos; não são enviados dados pessoais nem a localização do dispositivo.</p>
+    <p>Ao utilizar o mapa interativo para procurar estações próximas, os mosaicos cartográficos são carregados diretamente a partir dos servidores do OpenStreetMap (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). A aplicação não solicita permissões de localização GPS nem envia a localização física do dispositivo.</p>
     <p>Os dados sobre os próximos eclipses solares e lunares são obtidos através da API OPALE do IMCCE – Observatoire de
       Paris (<a href="https://opale.imcce.fr">opale.imcce.fr</a>). A comunicação é cifrada através de HTTPS/TLS. Nos
       eclipses solares, apenas as coordenadas geográficas públicas da estação são transmitidas; nos eclipses lunares não
@@ -780,9 +802,11 @@
     <p>Tillgängligheten av väderdata beror på Weather Underground API-tjänsten, som drivs av en tredje part utanför
       utvecklarens kontroll. Utvecklaren ansvarar inte för eventuella avbrott, ändringar eller nedläggning av den
       tjänsten.</p>
-    <p>Detektering av himmelsförhållanden och luftkvalitetsdata kompletteras av Open-Meteo API (<a
+    <p>Detektering av himmelsförhållanden, luftkvalitetsdata och ortssökning på stationskartan kompletteras av Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), en open-source vädertjänst. Endast väderstationens offentliga
-      geografiska koordinater överförs; inga personuppgifter skickas.</p>
+      geografiska koordinater eller det sökta ortsnamnet överförs; inga personuppgifter eller enhetsposition skickas.</p>
+    <p>När den interaktiva kartan används för att hitta närliggande stationer laddas kartrutor direkt från OpenStreetMaps servrar (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>). Appen begär inte GPS-platstillstånd och skickar inte enhetens fysiska plats.</p>
     <p>Data om kommande sol- och månförmörkelser hämtas via OPALE API som drivs av IMCCE – Observatoire de Paris (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>). Kommunikationen krypteras via HTTPS/TLS. För
       solförmörkelser överförs endast väderstationens offentliga geografiska koordinater; för månförmörkelser skickas
@@ -829,9 +853,11 @@
     <p>Hava durumu verilerinin kullanılabilirliği, geliştiricinin kontrolü dışında bir üçüncü taraf tarafından
       işletilen Weather Underground API hizmetine bağlıdır. Geliştirici, bu hizmetin herhangi bir kesintiye
       uğraması, değiştirilmesi veya sonlandırılması durumunda sorumluluk kabul etmez.</p>
-    <p>Gökyüzü koşullarının tespiti ve hava kalitesi verileri, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
+    <p>Gökyüzü koşullarının tespiti, hava kalitesi verileri ve istasyon haritasındaki şehir araması, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>) ile desteklenmektedir. Yalnızca istasyonun herkese açık
-      coğrafi koordinatları iletilmekte olup kişisel veri gönderilmemektedir.</p>
+      coğrafi koordinatları veya aranan yerleşim yeri adı iletilmekte olup kişisel veri ya da cihaz konumu gönderilmemektedir.</p>
+    <p>Yakındaki istasyonları bulmak için etkileşimli harita kullanıldığında, harita karoları doğrudan OpenStreetMap sunucularından (<a
+        href="https://www.openstreetmap.org/copyright">openstreetmap.org</a>) yüklenir. Uygulama GPS konum izni istemez ve cihazın fiziksel konumunu göndermez.</p>
     <p>Yaklaşan güneş ve ay tutulması verileri, IMCCE – Observatoire de Paris tarafından işletilen OPALE API (<a
         href="https://opale.imcce.fr">opale.imcce.fr</a>) aracılığıyla elde edilir. İletişim HTTPS/TLS ile şifrelenir.
       Güneş tutulmalarında yalnızca istasyonun herkese açık coğrafi koordinatları iletilir; ay tutulmalarında koordinat

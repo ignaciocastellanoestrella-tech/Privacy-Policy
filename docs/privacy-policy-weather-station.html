@@ -171,12 +171,12 @@
   </header>
 
   <main>
-    <span class="small">Last update: 2026-11-09</span>
+    <span class="small">Last update: 2026-11-19</span>
     <div class="card">
       <strong>Important:</strong> WXStation Connect does not collect personal data. It requires a Weather Underground
       API key provided by the user to function — without it, no data can be retrieved. The key is stored only on the
       user's device and is never accessible by the developer. All connections go directly from the device to external
-      services (Weather Underground, Open-Meteo, OpenStreetMap, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
+      services (Weather Underground, MET Norway, Open-Meteo, OpenStreetMap, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
       backend. Firebase Analytics (Google) collects anonymous usage statistics and in-app purchase events for
       advertising attribution; this data is processed by Google under their own privacy policy.
     </div>
@@ -226,7 +226,15 @@
     <p>La disponibilidad de los datos meteorológicos depende del servicio de API de Weather Underground, operado por
       un tercero ajeno al control del desarrollador. El desarrollador no se hace responsable de cualquier
       interrupción, modificación o cese de dicho servicio.</p>
-    <p>La detección del estado del cielo, los datos de calidad del aire y el buscador de localidades del mapa de estaciones se obtienen a través de la API de Open-Meteo (<a
+    <p>Las previsiones meteorológicas opcionales por horas (~60 h) y hasta 10 días se obtienen a través de la API
+      Locationforecast 2.0 de MET Norway (Instituto Meteorológico de Noruega, <a
+        href="https://www.met.no/en">met.no</a>, bajo licencia CC BY 4.0). La comunicación está cifrada mediante
+      HTTPS/TLS. Únicamente se transmiten las coordenadas geográficas públicas de la estación (redondeadas a 4
+      decimales) y su altitud satelital, junto con una cabecera estándar <code>User-Agent</code> identificativa de la
+      aplicación exigida por los términos de uso de MET Norway; no se envía ningún dato personal, ubicación GPS del
+      dispositivo ni clave API de Weather Underground. Las respuestas se almacenan en caché localmente en el dispositivo.
+      WXStation Connect es una aplicación independiente y no está afiliada, respaldada ni patrocinada por MET Norway.</p>
+    <p>La detección del estado del cielo, los datos de calidad del aire, la altitud satelital para la previsión y el buscador de localidades del mapa de estaciones se obtienen a través de la API de Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servicio meteorológico de código abierto. Solo se
       transmiten las coordenadas geográficas públicas de la estación o el nombre de la localidad buscada; no se envía ningún dato personal ni la ubicación del dispositivo.</p>
     <p>Al utilizar el mapa interactivo para buscar estaciones cercanas, las teselas cartográficas se cargan directamente desde los servidores de OpenStreetMap (<a
@@ -277,7 +285,14 @@
     <p>The availability of weather data depends on the Weather Underground API service, which is operated by a third
       party beyond the developer's control. The developer is not responsible for any interruption, modification, or
       discontinuation of that service.</p>
-    <p>Sky condition detection, air quality data, and city search in the station discovery map are provided by the Open-Meteo API (<a
+    <p>Optional hourly (~60 h) and up to 10-day weather forecasts are obtained through the Locationforecast 2.0 API
+      operated by MET Norway (Norwegian Meteorological Institute, <a href="https://www.met.no/en">met.no</a>, under CC
+      BY 4.0). Communication is encrypted via HTTPS/TLS. Only the weather station's public geographic coordinates
+      (rounded to 4 decimal places) and its satellite elevation are transmitted, together with a standard app
+      identification <code>User-Agent</code> header required by MET Norway's Terms of Service; no personal data, device
+      GPS location, or Weather Underground API keys are sent. Responses are cached locally on the device. WXStation
+      Connect is an independent app and is not affiliated with, endorsed by, or sponsored by MET Norway.</p>
+    <p>Sky condition detection, air quality data, satellite elevation for forecast calibration, and city search in the station discovery map are provided by the Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), an open-source weather service. Only the weather
       station's public geographic coordinates or the searched locality name are transmitted; no personal data or device location is sent.</p>
     <p>When using the interactive map to discover nearby stations, map tiles are loaded directly from OpenStreetMap servers (<a
@@ -327,7 +342,15 @@
       společností Weather Underground ani The Weather Company, LLC.</p>
     <p>Dostupnost meteorologických dat závisí na službě API Weather Underground, kterou provozuje třetí strana mimo
       kontrolu vývojáře. Vývojář nenese odpovědnost za jakékoli přerušení, úpravy nebo ukončení této služby.</p>
-    <p>Detekce stavu oblohy, data o kvalitě ovzduší a vyhledávání měst v mapě stanic jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
+    <p>Volitelné hodinové předpovědi (~60 h) a předpovědi až na 10 dní jsou získávány prostřednictvím rozhraní
+      Locationforecast 2.0 API provozovaného Norským meteorologickým institutem – MET Norway (<a
+        href="https://www.met.no/en">met.no</a>, pod licencí CC BY 4.0). Komunikace je šifrována pomocí HTTPS/TLS.
+      Přenášejí se pouze veřejné zeměpisné souřadnice stanice (zaokrouhlené na 4 desetinná místa) a její satelitní
+      nadmořská výška spolu se standardní identifikační hlavičkou <code>User-Agent</code> vyžadovanou podmínkami služby
+      MET Norway; žádné osobní údaje, GPS poloha zařízení ani API klíče Weather Underground nejsou odesílány. Odpovědi
+      jsou ukládány do místní cache v zařízení. WXStation Connect je nezávislá aplikace a není přidružena, doporučena
+      ani sponzorována institutem MET Norway.</p>
+    <p>Detekce stavu oblohy, data o kvalitě ovzduší, satelitní nadmořská výška pro předpověď a vyhledávání měst v mapě stanic jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       meteorologickou službou s otevřeným zdrojovým kódem. Jsou
       přenášeny pouze veřejné zeměpisné souřadnice stanice nebo název hledané lokality; žádné osobní údaje ani poloha zařízení nejsou odesílány.</p>
     <p>Při použití interaktivní mapy k vyhledávání okolních stanic se mapové dlaždice načítají přímo ze serverů OpenStreetMap (<a
@@ -378,7 +401,14 @@
     <p>Tilgængeligheden af vejrdata afhænger af Weather Underground API-tjenesten, som drives af en tredjepart uden
       for udviklerens kontrol. Udvikleren er ikke ansvarlig for nogen afbrydelse, ændring eller ophør af denne
       tjeneste.</p>
-    <p>Vejrtilstandsregistrering, luftkvalitetsdata og bysøgning på stationskortet suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
+    <p>Valgfrie timeprognoser (~60 t) og op til 10-dages vejrudsigter hentes via Locationforecast 2.0 API drevet af
+      Det Norske Meteorologiske Institut – MET Norway (<a href="https://www.met.no/en">met.no</a>, under CC BY 4.0).
+      Kommunikationen er krypteret via HTTPS/TLS. Kun vejrstationens offentlige geografiske koordinater (afrundet til 4
+      decimaler) og dens satellithøjde overføres sammen med en standard app-identificerende <code>User-Agent</code>-header
+      som krævet af MET Norways brugervilkår; ingen personlige data, enhedens GPS-placering eller Weather Underground
+      API-nøgler sendes. Svar caches lokalt på enheden. WXStation Connect er en uafhængig app og er ikke tilknyttet,
+      godkendt eller sponsoreret af MET Norway.</p>
+    <p>Vejrtilstandsregistrering, luftkvalitetsdata, satellithøjde til prognoser og bysøgning på stationskortet suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
       open-source vejrtjeneste. Kun vejrstationens offentlige
       geografiske koordinater eller det søgte bynavn overføres; der sendes ingen personlige data eller enhedsplacering.</p>
     <p>Når det interaktive kort bruges til at finde nærliggende stationer, indlæses kortfelter direkte fra OpenStreetMaps servere (<a
@@ -429,7 +459,16 @@
     <p>Die Verfügbarkeit von Wetterdaten hängt vom Weather Underground API-Dienst ab, der von einem Drittanbieter
       außerhalb der Kontrolle des Entwicklers betrieben wird. Der Entwickler übernimmt keine Verantwortung für
       Unterbrechungen, Änderungen oder die Einstellung dieses Dienstes.</p>
-    <p>Die Erkennung des Himmelsbedeckungsgrades, Luftqualitätsdaten sowie die Ortssuche auf der Stationskarte werden durch die Open-Meteo API (<a
+    <p>Optionale stündliche Wettervorhersagen (~60 Std.) und Vorhersagen bis zu 10 Tagen werden über die Locationforecast
+      2.0 API von MET Norway (Norwegisches Meteorologisches Institut, <a href="https://www.met.no/en">met.no</a>, unter
+      CC BY 4.0) bezogen. Die Kommunikation erfolgt verschlüsselt über HTTPS/TLS. Es werden ausschließlich die
+      öffentlichen geografischen Koordinaten der Wetterstation (auf 4 Dezimalstellen gerundet) und deren Satellitenhöhe
+      zusammen mit einem gemäß den Nutzungsbedingungen von MET Norway erforderlichen Standard-<code>User-Agent</code>-Header
+      zur App-Identifikation übermittelt; personenbezogene Daten, der GPS-Standort des Geräts oder Weather
+      Underground API-Schlüssel werden nicht gesendet. Antworten werden lokal auf dem Gerät zwischengespeichert.
+      WXStation Connect ist eine unabhängige App und steht in keiner Verbindung zu MET Norway; sie wird von diesem
+      weder empfohlen noch gesponsert.</p>
+    <p>Die Erkennung des Himmelsbedeckungsgrades, Luftqualitätsdaten, Satellitenhöhe für Vorhersagen sowie die Ortssuche auf der Stationskarte werden durch die Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), einen Open-Source-Wetterdienst, bereitgestellt. Es werden nur die
       öffentlichen geografischen Koordinaten der Wetterstation bzw. der gesuchte Ortsname übermittelt; personenbezogene Daten oder der Gerätestandort werden nicht
       gesendet.</p>
@@ -484,7 +523,16 @@
     <p>La disponibilité des données météorologiques dépend du service API Weather Underground, exploité par un tiers
       indépendant du développeur. Le développeur n'est pas responsable de toute interruption, modification ou arrêt
       de ce service.</p>
-    <p>La détection de l'état du ciel, les données de qualité de l'air et la recherche de localités sur la carte des stations sont fournies par l'API Open-Meteo (<a
+    <p>Les prévisions météorologiques facultatives heure par heure (~60 h) et jusqu'à 10 jours sont obtenues via l'API
+      Locationforecast 2.0 exploitée par l'Institut météorologique norvégien – MET Norway (<a
+        href="https://www.met.no/en">met.no</a>, sous licence CC BY 4.0). Les communications sont chiffrées via
+      HTTPS/TLS. Seules les coordonnées géographiques publiques de la station (arrondies à 4 décimales) et son altitude
+      satellitaire sont transmises, accompagnées d'un en-tête standard <code>User-Agent</code> identifiant
+      l'application tel qu'exigé par les conditions d'utilisation de MET Norway ; aucune donnée personnelle, position
+      GPS de l'appareil ni clé API Weather Underground n'est envoyée. Les réponses sont mises en cache localement sur
+      l'appareil. WXStation Connect est une application indépendante et n'est ni affiliée, ni approuvée, ni sponsorisée
+      par MET Norway.</p>
+    <p>La détection de l'état du ciel, les données de qualité de l'air, l'altitude satellitaire pour les prévisions et la recherche de localités sur la carte des stations sont fournies par l'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un service météorologique open-source. Seules les
       coordonnées géographiques publiques de la station ou le nom de la localité recherchée sont transmis ; aucune donnée personnelle ni localisation de l'appareil n'est envoyée.</p>
     <p>Lors de l'utilisation de la carte interactive pour rechercher des stations à proximité, les tuiles cartographiques sont chargées directement depuis les serveurs d'OpenStreetMap (<a
@@ -538,7 +586,16 @@
     <p>La disponibilità dei dati meteorologici dipende dal servizio API di Weather Underground, gestito da una terza
       parte al di fuori del controllo dello sviluppatore. Lo sviluppatore non è responsabile di eventuali
       interruzioni, modifiche o cessazioni di tale servizio.</p>
-    <p>Il rilevamento delle condizioni del cielo, i dati sulla qualità dell'aria e la ricerca di località nella mappa delle stazioni sono forniti dall'API Open-Meteo (<a
+    <p>Le previsioni meteorologiche facoltative orarie (~60 h) e fino a 10 giorni vengono ottenute tramite l'API
+      Locationforecast 2.0 gestita dall'Istituto Meteorologico Norvegese – MET Norway (<a
+        href="https://www.met.no/en">met.no</a>, con licenza CC BY 4.0). Le comunicazioni sono cifrate tramite
+      HTTPS/TLS. Vengono trasmesse esclusivamente le coordinate geografiche pubbliche della stazione (arrotondate a 4
+      decimali) e la relativa altitudine satellitare, insieme a un'intestazione standard <code>User-Agent</code>
+      identificativa dell'app richiesta dai termini di utilizzo di MET Norway; non vengono inviati dati personali,
+      posizione GPS del dispositivo né chiavi API di Weather Underground. Le risposte vengono memorizzate nella cache
+      locale sul dispositivo. WXStation Connect è un'applicazione indipendente e non è affiliata, approvata o
+      sponsorizzata da MET Norway.</p>
+    <p>Il rilevamento delle condizioni del cielo, i dati sulla qualità dell'aria, l'altitudine satellitare per le previsioni e la ricerca di località nella mappa delle stazioni sono forniti dall'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servizio meteorologico open-source. Vengono trasmessi
       solo le coordinate geografiche pubbliche della stazione o il nome della località cercata; non vengono inviati dati personali né la posizione del dispositivo.</p>
     <p>Quando si utilizza la mappa interattiva per cercare stazioni vicine, i tasselli cartografici vengono caricati direttamente dai server di OpenStreetMap (<a
@@ -590,7 +647,14 @@
     <p>Tilgjengeligheten av værdata avhenger av Weather Underground API-tjenesten, som drives av en tredjepart utenfor
       utviklerens kontroll. Utvikleren er ikke ansvarlig for eventuelle avbrudd, endringer eller nedleggelse av denne
       tjenesten.</p>
-    <p>Registrering av himmelforhold, luftkvalitetsdata og bysøk i stasjonskartet suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
+    <p>Valgfrie timevarsler (~60 t) og værvarsler opptil 10 dager hentes via Locationforecast 2.0 API drevet av
+      Meteorologisk institutt – MET Norway (<a href="https://www.met.no/en">met.no</a>, under lisensen CC BY 4.0).
+      Kommunikasjonen krypteres via HTTPS/TLS. Kun værstasjonens offentlige geografiske koordinater (avrundet til 4
+      desimaler) og satellitthøyde overføres, sammen med en standard app-identifiserende <code>User-Agent</code>-header
+      som kreves i MET Norways brukervilkår; ingen personopplysninger, enhetens GPS-posisjon eller Weather Underground
+      API-nøkler sendes. Svar mellomlagres lokalt på enheten. WXStation Connect er en uavhengig app og er ikke
+      tilknyttet, godkjent eller sponset av MET Norway.</p>
+    <p>Registrering av himmelforhold, luftkvalitetsdata, satellitthøyde for varsler og bysøk i stasjonskartet suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       en open-source værtjeneste. Bare værstasjonens offentlige
       geografiske koordinater eller det søkte stedsnavnet overføres; ingen personopplysninger eller enhetsposisjon sendes.</p>
     <p>Når det interaktive kartet brukes til å finne nærliggende stasjoner, lastes kartfliser direkte fra OpenStreetMaps servere (<a
@@ -642,7 +706,15 @@
     <p>De beschikbaarheid van weergegevens is afhankelijk van de Weather Underground API-dienst, die wordt beheerd
       door een derde partij buiten de controle van de ontwikkelaar. De ontwikkelaar is niet verantwoordelijk voor
       eventuele onderbrekingen, wijzigingen of stopzetting van die dienst.</p>
-    <p>Detectie van hemelomstandigheden, luchtkwaliteitsgegevens en het zoeken naar plaatsen op de stationskaart worden aangevuld door de Open-Meteo API (<a
+    <p>Optionele weersverwachtingen per uur (~60 u) en tot 10 dagen worden opgehaald via de Locationforecast 2.0 API
+      van het Noorse Meteorologisch Instituut – MET Norway (<a href="https://www.met.no/en">met.no</a>, onder CC BY
+      4.0). De communicatie verloopt versleuteld via HTTPS/TLS. Alleen de openbare geografische coördinaten van het
+      weerstation (afgerond op 4 decimalen) en de satelliethoogte ervan worden doorgegeven, samen met een standaard
+      app-identificerende <code>User-Agent</code>-header zoals vereist door de gebruiksvoorwaarden van MET Norway; er
+      worden geen persoonlijke gegevens, GPS-apparaatlocatie of Weather Underground API-sleutels verzonden. Antwoorden
+      worden lokaal op het apparaat gecacht. WXStation Connect is een onafhankelijke app en is niet gelieerd aan,
+      aanbevolen door of gesponsord door MET Norway.</p>
+    <p>Detectie van hemelomstandigheden, luchtkwaliteitsgegevens, satelliethoogte voor verwachtingen en het zoeken naar plaatsen op de stationskaart worden aangevuld door de Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), een open-source weerdienst. Alleen de openbare geografische
       coördinaten van het weerstation of de gezochte plaatsnaam worden doorgegeven; er worden geen persoonlijke gegevens of apparaatlocatie verzonden.</p>
     <p>Bij het gebruik van de interactieve kaart om nabijgelegen stations te zoeken, worden kaarttegels rechtstreeks geladen vanaf de servers van OpenStreetMap (<a
@@ -697,7 +769,15 @@
     <p>Dostępność danych meteorologicznych zależy od usługi API Weather Underground, która jest obsługiwana przez
       podmiot zewnętrzny niezależny od dewelopera. Deweloper nie ponosi odpowiedzialności za jakiekolwiek przerwy,
       zmiany lub zaprzestanie świadczenia tej usługi.</p>
-    <p>Wykrywanie warunków nieba, dane dotyczące jakości powietrza oraz wyszukiwanie miejscowości na mapie stacji są uzupełniane przez interfejs API Open-Meteo (<a
+    <p>Opcjonalne prognozy godzinowe (~60 h) i prognozy pogody do 10 dni są pobierane za pośrednictwem interfejsu
+      Locationforecast 2.0 API prowadzonego przez Norweski Instytut Meteorologiczny – MET Norway (<a
+        href="https://www.met.no/en">met.no</a>, na licencji CC BY 4.0). Komunikacja jest szyfrowana przy użyciu
+      HTTPS/TLS. Przesyłane są wyłącznie publiczne współrzędne geograficzne stacji (zaokrąglone do 4 miejsc po
+      przecinku) oraz jej wysokość satelitarna wraz ze standardowym nagłówkiem <code>User-Agent</code> identyfikującym
+      aplikację wymaganym przez warunki korzystania z usług MET Norway; nie są wysyłane żadne dane osobowe, lokalizacja
+      GPS urządzenia ani klucze API Weather Underground. Odpowiedzi są buforowane lokalnie na urządzeniu. WXStation
+      Connect jest niezależną aplikacją i nie jest powiązana, zatwierdzona ani sponsorowana przez MET Norway.</p>
+    <p>Wykrywanie warunków nieba, dane dotyczące jakości powietrza, wysokość satelitarna dla prognoz oraz wyszukiwanie miejscowości na mapie stacji są uzupełniane przez interfejs API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), meteorologiczną usługę open-source. Przesyłane są wyłącznie
       publiczne współrzędne geograficzne stacji lub nazwa wyszukiwanej miejscowości; żadne dane osobowe ani lokalizacja urządzenia nie są wysyłane.</p>
     <p>Podczas korzystania z interaktywnej mapy w celu wyszukiwania pobliskich stacji kafelki mapy są pobierane bezpośrednio z serwerów OpenStreetMap (<a
@@ -750,7 +830,15 @@
     <p>A disponibilidade dos dados meteorológicos depende do serviço de API do Weather Underground, operado por um
       terceiro alheio ao controlo do programador. O programador não se responsabiliza por qualquer interrupção,
       alteração ou cessação desse serviço.</p>
-    <p>A deteção das condições do céu, os dados de qualidade do ar e a pesquisa de localidades no mapa de estações são complementados pela API Open-Meteo (<a
+    <p>As previsões meteorológicas opcionais horárias (~60 h) e até 10 dias são obtidas através da API Locationforecast
+      2.0 da MET Norway (Instituto Meteorológico da Noruega, <a href="https://www.met.no/en">met.no</a>, sob licença
+      CC BY 4.0). A comunicação é cifrada através de HTTPS/TLS. Apenas as coordenadas geográficas públicas da estação
+      (arredondadas a 4 casas decimais) e a respetiva altitude satelital são transmitidas, juntamente com um cabeçalho
+      padrão <code>User-Agent</code> de identificação da aplicação exigido pelos termos de utilização da MET Norway;
+      não são enviados dados pessoais, localização GPS do dispositivo nem chaves API do Weather Underground. As
+      respostas são armazenadas em cache localmente no dispositivo. O WXStation Connect é uma aplicação independente e
+      não está afiliada, endossada nem patrocinada pela MET Norway.</p>
+    <p>A deteção das condições do céu, os dados de qualidade do ar, a altitude satelital para previsões e a pesquisa de localidades no mapa de estações são complementados pela API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), um serviço meteorológico open-source. Apenas as
       coordenadas geográficas públicas da estação ou o nome da localidade pesquisada são transmitidos; não são enviados dados pessoais nem a localização do dispositivo.</p>
     <p>Ao utilizar o mapa interativo para procurar estações próximas, os mosaicos cartográficos são carregados diretamente a partir dos servidores do OpenStreetMap (<a
@@ -802,7 +890,14 @@
     <p>Tillgängligheten av väderdata beror på Weather Underground API-tjänsten, som drivs av en tredje part utanför
       utvecklarens kontroll. Utvecklaren ansvarar inte för eventuella avbrott, ändringar eller nedläggning av den
       tjänsten.</p>
-    <p>Detektering av himmelsförhållanden, luftkvalitetsdata och ortssökning på stationskartan kompletteras av Open-Meteo API (<a
+    <p>Valfria timprognoser (~60 timmar) och väderprognoser upp till 10 dygn hämtas via Locationforecast 2.0 API från
+      Meteorologisk institutt – MET Norway (<a href="https://www.met.no/en">met.no</a>, under licensen CC BY 4.0).
+      Kommunikationen krypteras via HTTPS/TLS. Endast väderstationens offentliga geografiska koordinater (avrundade till
+      4 decimaler) och dess satellithöjd överförs tillsammans med en standardmässig appidentifierande
+      <code>User-Agent</code>-rubrik som krävs enligt MET Norways användarvillkor; inga personuppgifter, enhetens
+      GPS-position eller Weather Underground API-nycklar skickas. Svar cachas lokalt på enheten. WXStation Connect är
+      en oberoende app och är inte ansluten till, godkänd av eller sponsrad av MET Norway.</p>
+    <p>Detektering av himmelsförhållanden, luftkvalitetsdata, satellithöjd för prognoser och ortssökning på stationskartan kompletteras av Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), en open-source vädertjänst. Endast väderstationens offentliga
       geografiska koordinater eller det sökta ortsnamnet överförs; inga personuppgifter eller enhetsposition skickas.</p>
     <p>När den interaktiva kartan används för att hitta närliggande stationer laddas kartrutor direkt från OpenStreetMaps servrar (<a
@@ -853,7 +948,14 @@
     <p>Hava durumu verilerinin kullanılabilirliği, geliştiricinin kontrolü dışında bir üçüncü taraf tarafından
       işletilen Weather Underground API hizmetine bağlıdır. Geliştirici, bu hizmetin herhangi bir kesintiye
       uğraması, değiştirilmesi veya sonlandırılması durumunda sorumluluk kabul etmez.</p>
-    <p>Gökyüzü koşullarının tespiti, hava kalitesi verileri ve istasyon haritasındaki şehir araması, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
+    <p>İsteğe bağlı saatlik (~60 saat) ve 10 güne kadar hava tahminleri, Norveç Meteoroloji Enstitüsü – MET Norway (<a
+        href="https://www.met.no/en">met.no</a>, CC BY 4.0 lisansı kapsamında) tarafından sunulan Locationforecast 2.0
+      API aracılığıyla alınır. İletişim HTTPS/TLS ile şifrelenir. Yalnızca istasyonun herkese açık coğrafi koordinatları
+      (4 ondalık basamağa yuvarlanmış) ve uydu yüksekliği, MET Norway kullanım şartlarının gerektirdiği standart uygulama
+      tanımlama <code>User-Agent</code> üstbilgisiyle birlikte iletilir; kişisel veri, cihazın GPS konumu veya Weather
+      Underground API anahtarları gönderilmez. Yanıtlar cihazda yerel olarak önbelleğe alınır. WXStation Connect
+      bağımsız bir uygulamadır ve MET Norway ile bağlantılı değildir, onun tarafından onaylanmamış veya desteklenmemiştir.</p>
+    <p>Gökyüzü koşullarının tespiti, hava kalitesi verileri, tahminler için uydu yüksekliği ve istasyon haritasındaki şehir araması, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>) ile desteklenmektedir. Yalnızca istasyonun herkese açık
       coğrafi koordinatları veya aranan yerleşim yeri adı iletilmekte olup kişisel veri ya da cihaz konumu gönderilmemektedir.</p>
     <p>Yakındaki istasyonları bulmak için etkileşimli harita kullanıldığında, harita karoları doğrudan OpenStreetMap sunucularından (<a

@@ -171,12 +171,12 @@
   </header>
 
   <main>
-    <span class="small">Last update: 2026-11-19</span>
+    <span class="small">Last update: 2026-11-20</span>
     <div class="card">
       <strong>Important:</strong> WXStation Connect does not collect personal data. It requires a Weather Underground
       API key provided by the user to function — without it, no data can be retrieved. The key is stored only on the
       user's device and is never accessible by the developer. All connections go directly from the device to external
-      services (Weather Underground, MET Norway, Open-Meteo, OpenStreetMap, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
+      services (Weather Underground, MET Norway, NOAA / National Weather Service, Open-Meteo, OpenStreetMap, and OPALE) using HTTPS/TLS encryption; there is no proprietary server or
       backend. Firebase Analytics (Google) collects anonymous usage statistics and in-app purchase events for
       advertising attribution; this data is processed by Google under their own privacy policy.
     </div>
@@ -234,6 +234,8 @@
       aplicación exigida por los términos de uso de MET Norway; no se envía ningún dato personal, ubicación GPS del
       dispositivo ni clave API de Weather Underground. Las respuestas se almacenan en caché localmente en el dispositivo.
       WXStation Connect es una aplicación independiente y no está afiliada, respaldada ni patrocinada por MET Norway.</p>
+    <p>Para las estaciones situadas en Estados Unidos y territorios estadounidenses, la previsión opcional por horas (72 h) y hasta 7 días, así como las alertas meteorológicas oficiales activas, se obtienen mediante la API pública de NOAA / National Weather Service (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). La comunicación está cifrada mediante HTTPS/TLS. Únicamente se transmiten las coordenadas geográficas públicas de la estación (redondeadas a 4 decimales) junto con una cabecera estándar <code>User-Agent</code> identificativa de la aplicación exigida por las condiciones de la API de NOAA / NWS; no se envía ningún dato personal, ubicación GPS del dispositivo ni claves API de Weather Underground. El estado de cobertura y las respuestas se almacenan en caché localmente en el dispositivo. Al abrir el enlace externo de una alerta en <code>weather.gov</code>, las coordenadas públicas de la estación y los parámetros de zona de la alerta se pasan en la URL del navegador. WXStation Connect es una aplicación independiente y no está afiliada, respaldada ni patrocinada por NOAA ni por el National Weather Service.</p>
     <p>La detección del estado del cielo, los datos de calidad del aire, la altitud satelital para la previsión y el buscador de localidades del mapa de estaciones se obtienen a través de la API de Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servicio meteorológico de código abierto. Solo se
       transmiten las coordenadas geográficas públicas de la estación o el nombre de la localidad buscada; no se envía ningún dato personal ni la ubicación del dispositivo.</p>
@@ -244,13 +246,13 @@
       consultas de eclipses solares solo se transmiten las coordenadas geográficas públicas de la estación; en las
       lunares no se envían coordenadas. Las respuestas se almacenan en caché localmente en el dispositivo. No se envían
       datos personales ni API keys. WXStation Connect no está afiliada al IMCCE ni al Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) se emplea para recopilar estadísticas de uso anónimas y registrar eventos de
-      compra con fines de atribución publicitaria. Dichos datos son procesados por Google conforme a su Política de
-      Privacidad (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Se incluye un enlace al servicio de radar meteorológico Ventusky (<a
         href="https://www.ventusky.com">ventusky.com</a>). Al pulsarlo, las coordenadas geográficas públicas de la
       estación se transmiten como parámetros en la URL al abrirse en el navegador del dispositivo. Estas coordenadas
       son procesadas por Ventusky conforme a su propia política de privacidad.</p>
+    <p>Firebase Analytics (Google) se emplea para recopilar estadísticas de uso anónimas y registrar eventos de
+      compra con fines de atribución publicitaria. Dichos datos son procesados por Google conforme a su Política de
+      Privacidad (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Seguridad de los datos</h3>
     <p>Toda la comunicación entre la aplicación y el servicio de Weather Underground se realiza mediante cifrado
       HTTPS/TLS. La API key y la configuración de estaciones se almacenan de forma segura en el propio dispositivo.</p>
@@ -292,6 +294,8 @@
       identification <code>User-Agent</code> header required by MET Norway's Terms of Service; no personal data, device
       GPS location, or Weather Underground API keys are sent. Responses are cached locally on the device. WXStation
       Connect is an independent app and is not affiliated with, endorsed by, or sponsored by MET Norway.</p>
+    <p>For stations located in the United States and U.S. territories, optional 72-hour hourly forecasts, up to 7-day forecasts, and official active weather alerts are obtained via the public NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Communication is encrypted via HTTPS/TLS. Only the weather station's public geographic coordinates (rounded to 4 decimal places) are transmitted, together with a standard app-identifying <code>User-Agent</code> header required by NOAA / NWS API terms; no personal data, device GPS location, or Weather Underground API keys are sent. Coverage status and responses are cached locally on the device. When opening an alert's external link on <code>weather.gov</code>, public station coordinates and alert zone parameters are passed in the browser URL. WXStation Connect is an independent app and is not affiliated with, endorsed by, or sponsored by NOAA or the National Weather Service.</p>
     <p>Sky condition detection, air quality data, satellite elevation for forecast calibration, and city search in the station discovery map are provided by the Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), an open-source weather service. Only the weather
       station's public geographic coordinates or the searched locality name are transmitted; no personal data or device location is sent.</p>
@@ -302,13 +306,13 @@
       only the weather station's public geographic coordinates are transmitted; lunar eclipse queries do not send
       coordinates. Responses are cached locally on the device. No personal data or API keys are sent. WXStation Connect
       is not affiliated with IMCCE or the Paris Observatory.</p>
-    <p>Firebase Analytics (Google) is used to collect anonymous usage statistics and register in-app purchase
-      events for advertising attribution purposes. This data is processed by Google under their own Privacy Policy (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>A link to the Ventusky weather radar service (<a href="https://www.ventusky.com">ventusky.com</a>) is included in
       the app. When opened, the weather
       station's public geographic coordinates are transmitted as URL parameters in the device browser. These
       coordinates are processed by Ventusky under their own privacy policy.</p>
+    <p>Firebase Analytics (Google) is used to collect anonymous usage statistics and register in-app purchase
+      events for advertising attribution purposes. This data is processed by Google under their own Privacy Policy (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Data security</h3>
     <p>All communication between the app and the Weather Underground service is encrypted using HTTPS/TLS. The API
       key and station settings are stored securely on the device.</p>
@@ -350,6 +354,8 @@
       MET Norway; žádné osobní údaje, GPS poloha zařízení ani API klíče Weather Underground nejsou odesílány. Odpovědi
       jsou ukládány do místní cache v zařízení. WXStation Connect je nezávislá aplikace a není přidružena, doporučena
       ani sponzorována institutem MET Norway.</p>
+    <p>Pro stanice umístěné ve Spojených státech a na územích USA jsou volitelné hodinové předpovědi (72 h), předpovědi až na 7 dní a oficiální aktivní výstrahy před počasím získávány prostřednictvím veřejného rozhraní NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Komunikace je šifrována pomocí HTTPS/TLS. Přenášejí se pouze veřejné zeměpisné souřadnice stanice (zaokrouhlené na 4 desetinná místa) spolu se standardní identifikační hlavičkou <code>User-Agent</code> aplikace vyžadovanou podmínkami rozhraní API NOAA / NWS; žádné osobní údaje, GPS poloha zařízení ani API klíče Weather Underground nejsou odesílány. Stav pokrytí a odpovědi jsou ukládány do místní cache v zařízení. Při otevření externího odkazu výstrahy na <code>weather.gov</code> jsou v adrese URL prohlížeče předány veřejné souřadnice stanice a parametry zóny výstrahy. WXStation Connect je nezávislá aplikace a není přidružena, doporučena ani sponzorována organizací NOAA ani National Weather Service.</p>
     <p>Detekce stavu oblohy, data o kvalitě ovzduší, satelitní nadmořská výška pro předpověď a vyhledávání měst v mapě stanic jsou doplněna rozhraním Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       meteorologickou službou s otevřeným zdrojovým kódem. Jsou
       přenášeny pouze veřejné zeměpisné souřadnice stanice nebo název hledané lokality; žádné osobní údaje ani poloha zařízení nejsou odesílány.</p>
@@ -360,13 +366,13 @@
       pomocí HTTPS/TLS. U slunečních zatmění jsou přenášeny pouze veřejné zeměpisné souřadnice stanice; u měsíčních
       zatmění se souřadnice neodesílají. Odpovědi jsou ukládány do místní cache v zařízení. Nejsou odesílány žádné
       osobní údaje ani API klíče. WXStation Connect není přidružena k IMCCE ani Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) slouží ke shromažďování anonymních statistik využití a registraci nákupů v
-      aplikaci pro účely reklamní atribuce. Tato data jsou zpracovávána společností Google podle jejích vlastních Zásad
-      ochrany soukromí (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Součástí aplikace je odkaz na meteorologickou radarovou službu Ventusky (<a
         href="https://www.ventusky.com">ventusky.com</a>). Po klepnutí na něj jsou veřejné zeměpisné souřadnice vaší
       meteorologické stanice přeneseny jako parametry URL při otevření v prohlížeči zařízení. Tyto souřadnice jsou
       zpracovávány společností Ventusky v souladu s jejími vlastními zásadami ochrany soukromí.</p>
+    <p>Firebase Analytics (Google) slouží ke shromažďování anonymních statistik využití a registraci nákupů v
+      aplikaci pro účely reklamní atribuce. Tato data jsou zpracovávána společností Google podle jejích vlastních Zásad
+      ochrany soukromí (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Zabezpečení dat</h3>
     <p>Veškerá komunikace mezi aplikací a službou Weather Underground probíhá šifrovaně prostřednictvím HTTPS/TLS.
       API klíč a nastavení stanic jsou bezpečně uloženy přímo v zařízení.</p>
@@ -408,6 +414,8 @@
       som krævet af MET Norways brugervilkår; ingen personlige data, enhedens GPS-placering eller Weather Underground
       API-nøgler sendes. Svar caches lokalt på enheden. WXStation Connect er en uafhængig app og er ikke tilknyttet,
       godkendt eller sponsoreret af MET Norway.</p>
+    <p>For stationer beliggende i USA og amerikanske territorier hentes valgfrie 72-timers timeprognoser, op til 7-dages vejrudsigter samt officielle aktive vejrvarsler via det offentlige NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Kommunikationen er krypteret via HTTPS/TLS. Kun vejrstationens offentlige geografiske koordinater (afrundet til 4 decimaler) overføres sammen med en standard app-identificerende <code>User-Agent</code>-header som krævet i NOAA / NWS API-vilkårene; ingen personlige data, enhedens GPS-placering eller Weather Underground API-nøgler sendes. Dækningsstatus og svar caches lokalt på enheden. Når et eksternt varslingslink åbnes på <code>weather.gov</code>, videregives stationens offentlige koordinater og varslingszoneparametre i browserens URL. WXStation Connect er en uafhængig app og er ikke tilknyttet, godkendt eller sponsoreret af NOAA eller National Weather Service.</p>
     <p>Vejrtilstandsregistrering, luftkvalitetsdata, satellithøjde til prognoser og bysøgning på stationskortet suppleres af Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>), en
       open-source vejrtjeneste. Kun vejrstationens offentlige
       geografiske koordinater eller det søgte bynavn overføres; der sendes ingen personlige data eller enhedsplacering.</p>
@@ -418,12 +426,12 @@
       solformørkelser overføres kun vejrstationens offentlige geografiske koordinater; ved måneformørkelser sendes ingen
       koordinater. Svar caches lokalt på enheden. Ingen personlige data eller API-nøgler sendes. WXStation Connect er
       ikke tilknyttet IMCCE eller Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) benyttes til at indsamle anonyme brugsstatistikker og registrere køb i appen med
-      henblik på reklamattribution. Disse data behandles af Google under deres egne privatlivspolitik (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Et link til Ventusky vejrradartjenesten (<a href="https://www.ventusky.com">ventusky.com</a>) er inkluderet i
       appen. Når det åbnes, overføres vejrstationens offentlige geografiske koordinater som URL-parametre i enhedens
       browser. Disse koordinater behandles af Ventusky i henhold til deres egne privatlivspolitik.</p>
+    <p>Firebase Analytics (Google) benyttes til at indsamle anonyme brugsstatistikker og registrere køb i appen med
+      henblik på reklamattribution. Disse data behandles af Google under deres egne privatlivspolitik (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Datasikkerhed</h3>
     <p>Al kommunikation mellem appen og Weather Underground-tjenesten er krypteret med HTTPS/TLS. API-nøglen og
       stationsindstillinger gemmes sikkert på selve enheden.</p>
@@ -468,6 +476,8 @@
       Underground API-Schlüssel werden nicht gesendet. Antworten werden lokal auf dem Gerät zwischengespeichert.
       WXStation Connect ist eine unabhängige App und steht in keiner Verbindung zu MET Norway; sie wird von diesem
       weder empfohlen noch gesponsert.</p>
+    <p>Für Stationen in den Vereinigten Staaten und US-Territorien werden optionale 72-Stunden-Vorhersagen, Vorhersagen bis zu 7 Tagen sowie offizielle aktive Wetterwarnungen über die öffentliche NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>) abgerufen. Die Kommunikation erfolgt verschlüsselt über HTTPS/TLS. Es werden ausschließlich die öffentlichen geografischen Koordinaten der Wetterstation (auf 4 Dezimalstellen gerundet) zusammen mit einem gemäß den Nutzungsbedingungen der NOAA / NWS API erforderlichen Standard-<code>User-Agent</code>-Header zur App-Identifikation übermittelt; personenbezogene Daten, der GPS-Standort des Geräts oder Weather Underground API-Schlüssel werden nicht gesendet. Abdeckungsstatus und Antworten werden lokal auf dem Gerät zwischengespeichert. Beim Öffnen eines externen Warnungslinks auf <code>weather.gov</code> werden öffentliche Stationskoordinaten und Warnzonenparameter in der Browser-URL übergeben. WXStation Connect ist eine unabhängige App und steht in keiner Verbindung zu NOAA oder dem National Weather Service; sie wird von diesen weder empfohlen noch gesponsert.</p>
     <p>Die Erkennung des Himmelsbedeckungsgrades, Luftqualitätsdaten, Satellitenhöhe für Vorhersagen sowie die Ortssuche auf der Stationskarte werden durch die Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), einen Open-Source-Wetterdienst, bereitgestellt. Es werden nur die
       öffentlichen geografischen Koordinaten der Wetterstation bzw. der gesuchte Ortsname übermittelt; personenbezogene Daten oder der Gerätestandort werden nicht
@@ -480,14 +490,14 @@
       Mondfinsternissen werden keine Koordinaten gesendet. Antworten werden lokal auf dem Gerät zwischengespeichert. Es
       werden keine personenbezogenen Daten oder API-Schlüssel gesendet. WXStation Connect ist weder mit dem IMCCE noch mit
       dem Observatoire de Paris verbunden.</p>
-    <p>Firebase Analytics (Google) wird zur Erfassung anonymer Nutzungsstatistiken und zur Registrierung von
-      In-App-Käufen für Zwecke der Werbe-Attribution eingesetzt. Diese Daten werden von Google gemäß deren eigener
-      Datenschutzrichtlinie verarbeitet (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Ein Link zum Wetter-Radardienst Ventusky (<a href="https://www.ventusky.com">ventusky.com</a>) ist in der App
       enthalten. Beim Öffnen werden die öffentlichen geografischen Koordinaten Ihrer Wetterstation als URL-Parameter
       im Browser des Geräts übermittelt. Diese Koordinaten werden von Ventusky gemäß deren eigener
       Datenschutzrichtlinie verarbeitet.</p>
+    <p>Firebase Analytics (Google) wird zur Erfassung anonymer Nutzungsstatistiken und zur Registrierung von
+      In-App-Käufen für Zwecke der Werbe-Attribution eingesetzt. Diese Daten werden von Google gemäß deren eigener
+      Datenschutzrichtlinie verarbeitet (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Datensicherheit</h3>
     <p>Die gesamte Kommunikation zwischen der App und dem Weather Underground-Dienst erfolgt verschlüsselt über
       HTTPS/TLS. Der API-Schlüssel und die Stationseinstellungen werden sicher auf dem Gerät selbst gespeichert.</p>
@@ -532,6 +542,8 @@
       GPS de l'appareil ni clé API Weather Underground n'est envoyée. Les réponses sont mises en cache localement sur
       l'appareil. WXStation Connect est une application indépendante et n'est ni affiliée, ni approuvée, ni sponsorisée
       par MET Norway.</p>
+    <p>Pour les stations situées aux États-Unis et dans les territoires américains, les prévisions horaires facultatives (72 h), jusqu'à 7 jours ainsi que les alertes météorologiques officielles actives sont obtenues via l'API publique NOAA / National Weather Service (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Les communications sont chiffrées via HTTPS/TLS. Seules les coordonnées géographiques publiques de la station (arrondies à 4 décimales) sont transmises, accompagnées d'un en-tête standard <code>User-Agent</code> identifiant l'application tel qu'exigé par les conditions d'utilisation de l'API NOAA / NWS ; aucune donnée personnelle, position GPS de l'appareil ni clé API Weather Underground n'est envoyée. L'état de couverture et les réponses sont mis en cache localement sur l'appareil. Lors de l'ouverture du lien externe d'une alerte sur <code>weather.gov</code>, les coordonnées publiques de la station et les paramètres de zone d'alerte sont transmis dans l'URL du navigateur. WXStation Connect est une application indépendante et n'est ni affiliée, ni approuvée, ni sponsorisée par la NOAA ni par le National Weather Service.</p>
     <p>La détection de l'état du ciel, les données de qualité de l'air, l'altitude satellitaire pour les prévisions et la recherche de localités sur la carte des stations sont fournies par l'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un service météorologique open-source. Seules les
       coordonnées géographiques publiques de la station ou le nom de la localité recherchée sont transmis ; aucune donnée personnelle ni localisation de l'appareil n'est envoyée.</p>
@@ -543,15 +555,15 @@
       transmises ; pour les éclipses lunaires, aucune coordonnée n'est envoyée. Les réponses sont mises en cache
       localement sur l'appareil. Aucune donnée personnelle ni clé API n'est transmise. WXStation Connect n'est pas
       affiliée à l'IMCCE ni à l'Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) est utilisé pour collecter des statistiques d'utilisation anonymes et enregistrer
-      des événements d'achat intégrés à des fins d'attribution publicitaire. Ces données sont traitées par Google
-      conformément à leur propre Politique de confidentialité (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Un lien vers le service de radar météorologique Ventusky (<a href="https://www.ventusky.com">ventusky.com</a>)
       est inclus dans l'application. Lors de son ouverture, les
       coordonnées géographiques publiques de votre station météorologique sont transmises en tant que paramètres d'URL
       dans le navigateur de l'appareil. Ces coordonnées sont traitées par Ventusky conformément à leur propre politique
       de confidentialité.</p>
+    <p>Firebase Analytics (Google) est utilisé pour collecter des statistiques d'utilisation anonymes et enregistrer
+      des événements d'achat intégrés à des fins d'attribution publicitaire. Ces données sont traitées par Google
+      conformément à leur propre Politique de confidentialité (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Sécurité des données</h3>
     <p>Toutes les communications entre l'application et le service Weather Underground sont chiffrées par HTTPS/TLS.
       La clé API et les paramètres des stations sont stockés de manière sécurisée sur l'appareil lui-même.</p>
@@ -595,6 +607,8 @@
       posizione GPS del dispositivo né chiavi API di Weather Underground. Le risposte vengono memorizzate nella cache
       locale sul dispositivo. WXStation Connect è un'applicazione indipendente e non è affiliata, approvata o
       sponsorizzata da MET Norway.</p>
+    <p>Per le stazioni situate negli Stati Uniti e nei territori statunitensi, le previsioni orarie facoltative (72 h), fino a 7 giorni e le allerte meteorologiche ufficiali attive vengono ottenute tramite l'API pubblica NOAA / National Weather Service (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Le comunicazioni sono cifrate tramite HTTPS/TLS. Vengono trasmesse esclusivamente le coordinate geografiche pubbliche della stazione (arrotondate a 4 decimali), insieme a un'intestazione standard <code>User-Agent</code> identificativa dell'app richiesta dai termini dell'API NOAA / NWS; non vengono inviati dati personali, posizione GPS del dispositivo né chiavi API di Weather Underground. Lo stato di copertura e le risposte vengono memorizzati nella cache locale sul dispositivo. Quando si apre il collegamento esterno di un'allerta su <code>weather.gov</code>, le coordinate pubbliche della stazione e i parametri della zona di allerta vengono passati nell'URL del browser. WXStation Connect è un'applicazione indipendente e non è affiliata, approvata o sponsorizzata da NOAA o dal National Weather Service.</p>
     <p>Il rilevamento delle condizioni del cielo, i dati sulla qualità dell'aria, l'altitudine satellitare per le previsioni e la ricerca di località nella mappa delle stazioni sono forniti dall'API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), un servizio meteorologico open-source. Vengono trasmessi
       solo le coordinate geografiche pubbliche della stazione o il nome della località cercata; non vengono inviati dati personali né la posizione del dispositivo.</p>
@@ -605,14 +619,14 @@
       le eclissi solari vengono trasmesse solo le coordinate geografiche pubbliche della stazione; per quelle lunari non
       vengono inviate coordinate. Le risposte vengono memorizzate in cache locale sul dispositivo. Non vengono inviati
       dati personali né API key. WXStation Connect non è affiliata all'IMCCE né all'Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) è utilizzato per raccogliere statistiche di utilizzo anonime e registrare eventi
-      di acquisto in-app a fini di attribuzione pubblicitaria. Questi dati sono elaborati da Google in conformità con
-      la propria Informativa sulla privacy (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Un collegamento al servizio radar meteorologico Ventusky (<a href="https://www.ventusky.com">ventusky.com</a>) è
       incluso nell'app. All'apertura, le coordinate geografiche
       pubbliche della stazione meteorologica vengono trasmesse come parametri URL nel browser del dispositivo. Queste
       coordinate vengono elaborate da Ventusky in conformità con la propria informativa sulla privacy.</p>
+    <p>Firebase Analytics (Google) è utilizzato per raccogliere statistiche di utilizzo anonime e registrare eventi
+      di acquisto in-app a fini di attribuzione pubblicitaria. Questi dati sono elaborati da Google in conformità con
+      la propria Informativa sulla privacy (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Sicurezza dei dati</h3>
     <p>Tutte le comunicazioni tra l'app e il servizio Weather Underground sono cifrate tramite HTTPS/TLS. La API key
       e le impostazioni delle stazioni sono conservate in modo sicuro sul dispositivo stesso.</p>
@@ -654,6 +668,8 @@
       som kreves i MET Norways brukervilkår; ingen personopplysninger, enhetens GPS-posisjon eller Weather Underground
       API-nøkler sendes. Svar mellomlagres lokalt på enheten. WXStation Connect er en uavhengig app og er ikke
       tilknyttet, godkjent eller sponset av MET Norway.</p>
+    <p>For stasjoner i USA og amerikanske territorier hentes valgfrie 72-timers timevarsler, værvarsler opptil 7 dager og offisielle aktive værvarsler via det offentlige NOAA / National Weather Service API-et (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Kommunikasjonen krypteres via HTTPS/TLS. Kun værstasjonens offentlige geografiske koordinater (avrundet til 4 desimaler) overføres, sammen med en standard app-identifiserende <code>User-Agent</code>-header som kreves i NOAA / NWS API-vilkårene; ingen personopplysninger, enhetens GPS-posisjon eller Weather Underground API-nøkler sendes. Dekningsstatus og svar mellomlagres lokalt på enheten. Når du åpner en ekstern varslingslenke på <code>weather.gov</code>, sendes offentlige stasjonskoordinater og varselsoneparametere i nettleserens URL. WXStation Connect er en uavhengig app og er ikke tilknyttet, godkjent eller sponset av NOAA eller National Weather Service.</p>
     <p>Registrering av himmelforhold, luftkvalitetsdata, satellitthøyde for varsler og bysøk i stasjonskartet suppleres av Open-Meteo API (<a href="https://open-meteo.com">open-meteo.com</a>),
       en open-source værtjeneste. Bare værstasjonens offentlige
       geografiske koordinater eller det søkte stedsnavnet overføres; ingen personopplysninger eller enhetsposisjon sendes.</p>
@@ -664,13 +680,13 @@
       solformørkelser overføres kun værstasjonens offentlige geografiske koordinater; for måneformørkelser sendes ingen
       koordinater. Svar mellomlagres lokalt på enheten. Ingen personopplysninger eller API-nøkler sendes. WXStation
       Connect er ikke tilknyttet IMCCE eller Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) benyttes for å samle inn anonyme bruksstatistikker og registrere kjøpshendelser i
-      appen for reklamattribusjonsformål. Disse dataene behandles av Google i henhold til deres egen personvernpolicy
-      (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>En lenke til Ventusky værvarsingstjenesten (<a href="https://www.ventusky.com">ventusky.com</a>) er inkludert i
       appen. Ved åpning overføres værstasjonens
       offentlige geografiske koordinater som URL-parametere i enhetens nettleser. Disse koordinatene behandles av
       Ventusky i henhold til deres egne personvernregler.</p>
+    <p>Firebase Analytics (Google) benyttes for å samle inn anonyme bruksstatistikker og registrere kjøpshendelser i
+      appen for reklamattribusjonsformål. Disse dataene behandles av Google i henhold til deres egen personvernpolicy
+      (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Datasikkerhet</h3>
     <p>All kommunikasjon mellom appen og Weather Underground-tjenesten er kryptert med HTTPS/TLS. API-nøkkelen og
       stasjonsinnstillinger lagres sikkert på selve enheten.</p>
@@ -714,6 +730,8 @@
       worden geen persoonlijke gegevens, GPS-apparaatlocatie of Weather Underground API-sleutels verzonden. Antwoorden
       worden lokaal op het apparaat gecacht. WXStation Connect is een onafhankelijke app en is niet gelieerd aan,
       aanbevolen door of gesponsord door MET Norway.</p>
+    <p>Voor stations in de Verenigde Staten en Amerikaanse gebiedsdelen worden optionele 72-uurs verwachtingen per uur, tot 7-daagse verwachtingen en officiële actieve weerwaarschuwingen opgehaald via de openbare NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). De communicatie verloopt versleuteld via HTTPS/TLS. Alleen de openbare geografische coördinaten van het weerstation (afgerond op 4 decimalen) worden doorgegeven, samen met een standaard app-identificerende <code>User-Agent</code>-header zoals vereist door de NOAA / NWS API-voorwaarden; er worden geen persoonlijke gegevens, GPS-apparaatlocatie of Weather Underground API-sleutels verzonden. De dekkingsstatus en antwoorden worden lokaal op het apparaat gecacht. Bij het openen van een externe waarschuwingslink op <code>weather.gov</code> worden de openbare stationcoördinaten en waarschuwingszoneparameters doorgegeven in de browser-URL. WXStation Connect is een onafhankelijke app en is niet gelieerd aan, aanbevolen door of gesponsord door NOAA of de National Weather Service.</p>
     <p>Detectie van hemelomstandigheden, luchtkwaliteitsgegevens, satelliethoogte voor verwachtingen en het zoeken naar plaatsen op de stationskaart worden aangevuld door de Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), een open-source weerdienst. Alleen de openbare geografische
       coördinaten van het weerstation of de gezochte plaatsnaam worden doorgegeven; er worden geen persoonlijke gegevens of apparaatlocatie verzonden.</p>
@@ -725,14 +743,14 @@
       maansverduisteringen worden geen coördinaten verzonden. Antwoorden worden lokaal in de cache op het apparaat
       opgeslagen. Er worden geen persoonlijke gegevens of API-sleutels verzonden. WXStation Connect is niet verbonden met
       IMCCE of Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) wordt gebruikt voor het verzamelen van anonieme gebruiksstatistieken en het
-      registreren van in-app aankoopgebeurtenissen voor advertentie-attributiedoeleinden. Deze gegevens worden door
-      Google verwerkt onder hun eigen privacybeleid (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Een link naar de Ventusky weerradar-dienst (<a href="https://www.ventusky.com">ventusky.com</a>) is opgenomen
       in de app. Bij het openen worden de openbare geografische coördinaten van uw weerstation als URL-parameters
       doorgegeven in de browser van het apparaat. Deze coördinaten worden door Ventusky verwerkt onder hun eigen
       privacybeleid.</p>
+    <p>Firebase Analytics (Google) wordt gebruikt voor het verzamelen van anonieme gebruiksstatistieken en het
+      registreren van in-app aankoopgebeurtenissen voor advertentie-attributiedoeleinden. Deze gegevens worden door
+      Google verwerkt onder hun eigen privacybeleid (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Gegevensbeveiliging</h3>
     <p>Alle communicatie tussen de app en de Weather Underground-dienst is versleuteld via HTTPS/TLS. De API-sleutel
       en stationsinstellingen worden veilig opgeslagen op het apparaat zelf.</p>
@@ -777,6 +795,8 @@
       aplikację wymaganym przez warunki korzystania z usług MET Norway; nie są wysyłane żadne dane osobowe, lokalizacja
       GPS urządzenia ani klucze API Weather Underground. Odpowiedzi są buforowane lokalnie na urządzeniu. WXStation
       Connect jest niezależną aplikacją i nie jest powiązana, zatwierdzona ani sponsorowana przez MET Norway.</p>
+    <p>Dla stacji znajdujących się w Stanach Zjednoczonych i na terytoriach USA opcjonalne prognozy godzinowe (72 h), prognozy do 7 dni oraz oficjalne aktywne alerty pogodowe są pobierane za pośrednictwem publicznego interfejsu NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Komunikacja jest szyfrowana przy użyciu HTTPS/TLS. Przesyłane są wyłącznie publiczne współrzędne geograficzne stacji (zaokrąglone do 4 miejsc po przecinku) wraz ze standardowym nagłówkiem <code>User-Agent</code> identyfikującym aplikację wymaganym przez warunki korzystania z API NOAA / NWS; nie są wysyłane żadne dane osobowe, lokalizacja GPS urządzenia ani klucze API Weather Underground. Status pokrycia i odpowiedzi są buforowane lokalnie na urządzeniu. Po otwarciu zewnętrznego łącza alertu na stronie <code>weather.gov</code> publiczne współrzędne stacji i parametry strefy alertu są przekazywane w adresie URL przeglądarki. WXStation Connect jest niezależną aplikacją i nie jest powiązana, zatwierdzona ani sponsorowana przez NOAA ani National Weather Service.</p>
     <p>Wykrywanie warunków nieba, dane dotyczące jakości powietrza, wysokość satelitarna dla prognoz oraz wyszukiwanie miejscowości na mapie stacji są uzupełniane przez interfejs API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), meteorologiczną usługę open-source. Przesyłane są wyłącznie
       publiczne współrzędne geograficzne stacji lub nazwa wyszukiwanej miejscowości; żadne dane osobowe ani lokalizacja urządzenia nie są wysyłane.</p>
@@ -788,13 +808,13 @@
       stacji; w przypadku zaćmień księżycowych współrzędne nie są wysyłane. Odpowiedzi są buforowane lokalnie na
       urządzeniu. Nie są przesyłane żadne dane osobowe ani klucze API. WXStation Connect nie jest powiązana z IMCCE ani
       Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) służy do zbierania anonimowych statystyk użytkowania i rejestrowania zdarzeń
-      zakupów w aplikacji w celu atrybucji reklamowej. Dane te są przetwarzane przez Google zgodnie z ich własną
-      Polityką prywatności (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Łącze do serwisu radarowego pogody Ventusky (<a href="https://www.ventusky.com">ventusky.com</a>) jest zawarte w
       aplikacji. Po jego otwarciu publiczne
       współrzędne geograficzne stacji meteorologicznej są przekazywane jako parametry URL w przeglądarce urządzenia.
       Te współrzędne są przetwarzane przez Ventusky zgodnie z ich własną polityką prywatności.</p>
+    <p>Firebase Analytics (Google) służy do zbierania anonimowych statystyk użytkowania i rejestrowania zdarzeń
+      zakupów w aplikacji w celu atrybucji reklamowej. Dane te są przetwarzane przez Google zgodnie z ich własną
+      Polityką prywatności (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Bezpieczeństwo danych</h3>
     <p>Cała komunikacja między aplikacją a serwisem Weather Underground jest szyfrowana przy użyciu HTTPS/TLS. Klucz
       API i konfiguracja stacji są bezpiecznie przechowywane na samym urządzeniu.</p>
@@ -838,6 +858,8 @@
       não são enviados dados pessoais, localização GPS do dispositivo nem chaves API do Weather Underground. As
       respostas são armazenadas em cache localmente no dispositivo. O WXStation Connect é uma aplicação independente e
       não está afiliada, endossada nem patrocinada pela MET Norway.</p>
+    <p>Para estações situadas nos Estados Unidos e territórios norte-americanos, as previsões opcionais horárias (72 h), até 7 dias e os alertas meteorológicos oficiais ativos são obtidos através da API pública NOAA / National Weather Service (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). A comunicação é cifrada através de HTTPS/TLS. Apenas as coordenadas geográficas públicas da estação (arredondadas a 4 casas decimais) são transmitidas, juntamente com um cabeçalho padrão <code>User-Agent</code> de identificação da aplicação exigido pelos termos da API NOAA / NWS; não são enviados dados pessoais, localização GPS do dispositivo nem chaves API do Weather Underground. O estado de cobertura e as respostas são armazenados em cache localmente no dispositivo. Ao abrir a ligação externa de um alerta em <code>weather.gov</code>, as coordenadas públicas da estação e os parâmetros da zona de alerta são passados no URL do navegador. O WXStation Connect é uma aplicação independente e não está afiliada, endossada nem patrocinada pela NOAA nem pelo National Weather Service.</p>
     <p>A deteção das condições do céu, os dados de qualidade do ar, a altitude satelital para previsões e a pesquisa de localidades no mapa de estações são complementados pela API Open-Meteo (<a
         href="https://open-meteo.com">open-meteo.com</a>), um serviço meteorológico open-source. Apenas as
       coordenadas geográficas públicas da estação ou o nome da localidade pesquisada são transmitidos; não são enviados dados pessoais nem a localização do dispositivo.</p>
@@ -848,14 +870,14 @@
       eclipses solares, apenas as coordenadas geográficas públicas da estação são transmitidas; nos eclipses lunares não
       são enviadas coordenadas. As respostas são armazenadas em cache localmente no dispositivo. Não são enviados dados
       pessoais nem chaves API. O WXStation Connect não está afiliado ao IMCCE nem ao Observatoire de Paris.</p>
-    <p>O Firebase Analytics (Google) é utilizado para recolher estatísticas de utilização anónimas e registar eventos
-      de compra para fins de atribuição publicitária. Estes dados são processados pela Google ao abrigo da sua própria
-      Política de Privacidade (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
-    </p>
     <p>Uma ligação ao serviço de radar meteorológico Ventusky (<a href="https://www.ventusky.com">ventusky.com</a>) está
       incluída na aplicação. Ao abri-la, as coordenadas
       geográficas públicas da estação meteorológica são transmitidas como parâmetros de URL no navegador do dispositivo.
       Estas coordenadas são processadas pela Ventusky de acordo com a sua própria política de privacidade.</p>
+    <p>O Firebase Analytics (Google) é utilizado para recolher estatísticas de utilização anónimas e registar eventos
+      de compra para fins de atribuição publicitária. Estes dados são processados pela Google ao abrigo da sua própria
+      Política de Privacidade (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).
+    </p>
     <h3>6. Segurança dos dados</h3>
     <p>Toda a comunicação entre a aplicação e o serviço Weather Underground é cifrada através de HTTPS/TLS. A chave
       API e as configurações das estações são armazenadas de forma segura no próprio dispositivo.</p>
@@ -897,6 +919,8 @@
       <code>User-Agent</code>-rubrik som krävs enligt MET Norways användarvillkor; inga personuppgifter, enhetens
       GPS-position eller Weather Underground API-nycklar skickas. Svar cachas lokalt på enheten. WXStation Connect är
       en oberoende app och är inte ansluten till, godkänd av eller sponsrad av MET Norway.</p>
+    <p>För stationer i USA och amerikanska territorier hämtas valfria 72-timmars timprognoser, prognoser upp till 7 dygn samt officiella aktiva vädervarningar via det offentliga NOAA / National Weather Service API:t (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>). Kommunikationen krypteras via HTTPS/TLS. Endast väderstationens offentliga geografiska koordinater (avrundade till 4 decimaler) överförs tillsammans med en standardmässig appidentifierande <code>User-Agent</code>-rubrik som krävs enligt NOAA / NWS API-villkor; inga personuppgifter, enhetens GPS-position eller Weather Underground API-nycklar skickas. Täckningsstatus och svar cachas lokalt på enheten. När en extern varningslänk öppnas på <code>weather.gov</code> skickas stationens offentliga koordinater och varningszonparametrar i webbläsarens URL. WXStation Connect är en oberoende app och är inte ansluten till, godkänd av eller sponsrad av NOAA eller National Weather Service.</p>
     <p>Detektering av himmelsförhållanden, luftkvalitetsdata, satellithöjd för prognoser och ortssökning på stationskartan kompletteras av Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>), en open-source vädertjänst. Endast väderstationens offentliga
       geografiska koordinater eller det sökta ortsnamnet överförs; inga personuppgifter eller enhetsposition skickas.</p>
@@ -907,12 +931,12 @@
       solförmörkelser överförs endast väderstationens offentliga geografiska koordinater; för månförmörkelser skickas
       inga koordinater. Svar lagras lokalt i cache på enheten. Inga personuppgifter eller API-nycklar skickas.
       WXStation Connect är inte knuten till IMCCE eller Observatoire de Paris.</p>
-    <p>Firebase Analytics (Google) används för att samla in anonym användningsstatistik och registrera köphändelser i
-      appen för reklamattribueringsändamål. Dessa data behandlas av Google enligt deras egen integritetspolicy (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>En länk till Ventusky väderradartjänsten (<a href="https://www.ventusky.com">ventusky.com</a>) finns i appen.
       Vid öppning överförs väderstationens offentliga geografiska koordinater som URL-parametrar i enhetens webbläsare.
       Dessa koordinater behandlas av Ventusky i enlighet med deras egen integritetspolicy.</p>
+    <p>Firebase Analytics (Google) används för att samla in anonym användningsstatistik och registrera köphändelser i
+      appen för reklamattribueringsändamål. Dessa data behandlas av Google enligt deras egen integritetspolicy (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Datasäkerhet</h3>
     <p>All kommunikation mellan appen och Weather Underground-tjänsten är krypterad med HTTPS/TLS. API-nyckeln och
       stationsinställningarna lagras säkert på enheten själv.</p>
@@ -955,6 +979,8 @@
       tanımlama <code>User-Agent</code> üstbilgisiyle birlikte iletilir; kişisel veri, cihazın GPS konumu veya Weather
       Underground API anahtarları gönderilmez. Yanıtlar cihazda yerel olarak önbelleğe alınır. WXStation Connect
       bağımsız bir uygulamadır ve MET Norway ile bağlantılı değildir, onun tarafından onaylanmamış veya desteklenmemiştir.</p>
+    <p>Amerika Birleşik Devletleri ve ABD topraklarında bulunan istasyonlar için isteğe bağlı 72 saatlik saatlik tahminler, 7 güne kadar tahminler ve resmi aktif hava durumu uyarıları halka açık NOAA / National Weather Service API (<a
+        href="https://www.weather.gov">weather.gov</a>, <code>api.weather.gov</code>) aracılığıyla alınır. İletişim HTTPS/TLS ile şifrelenir. Yalnızca istasyonun herkese açık coğrafi koordinatları (4 ondalık basamağa yuvarlanmış) ile NOAA / NWS API kullanım şartlarının gerektirdiği standart uygulama tanımlama <code>User-Agent</code> üstbilgisi iletilir; kişisel veri, cihazın GPS konumu veya Weather Underground API anahtarları gönderilmez. Kapsama durumu ve yanıtlar cihazda yerel olarak önbelleğe alınır. Bir uyarının <code>weather.gov</code> üzerindeki harici bağlantısı açıldığında, istasyonun herkese açık koordinatları ve uyarı bölgesi parametreleri tarayıcı URL'sinde iletilir. WXStation Connect bağımsız bir uygulamadır ve NOAA veya National Weather Service ile bağlantılı değildir; bu kuruluşlar tarafından onaylanmamış veya desteklenmemiştir.</p>
     <p>Gökyüzü koşullarının tespiti, hava kalitesi verileri, tahminler için uydu yüksekliği ve istasyon haritasındaki şehir araması, açık kaynaklı bir hava durumu servisi olan Open-Meteo API (<a
         href="https://open-meteo.com">open-meteo.com</a>) ile desteklenmektedir. Yalnızca istasyonun herkese açık
       coğrafi koordinatları veya aranan yerleşim yeri adı iletilmekte olup kişisel veri ya da cihaz konumu gönderilmemektedir.</p>
@@ -965,15 +991,15 @@
       Güneş tutulmalarında yalnızca istasyonun herkese açık coğrafi koordinatları iletilir; ay tutulmalarında koordinat
       gönderilmez. Yanıtlar cihazda yerel olarak önbelleğe alınır. Kişisel veri veya API anahtarı gönderilmez. WXStation
       Connect, IMCCE veya Observatoire de Paris ile bağlantılı değildir.</p>
-    <p>Firebase Analytics (Google), anonim kullanım istatistikleri toplamak ve reklam ilişkilendirme amaçlı uygulama
-      içi satın alma etkinliklerini kaydetmek için kullanılmaktadır. Bu veriler Google tarafından kendi Gizlilik
-      Politikası kapsamında işlenmektedir (<a
-        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <p>Ventusky hava durumu radar hizmetine (<a href="https://www.ventusky.com">ventusky.com</a>) bir bağlantı
       uygulamaya
       dahil edilmiştir. Açıldığında, hava durumu istasyonunun herkese açık coğrafi koordinatları cihazın tarayıcısında
       URL parametresi olarak iletilmektedir. Bu koordinatlar Ventusky tarafından kendi gizlilik politikası kapsamında
       işlenmektedir.</p>
+    <p>Firebase Analytics (Google), anonim kullanım istatistikleri toplamak ve reklam ilişkilendirme amaçlı uygulama
+      içi satın alma etkinliklerini kaydetmek için kullanılmaktadır. Bu veriler Google tarafından kendi Gizlilik
+      Politikası kapsamında işlenmektedir (<a
+        href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>).</p>
     <h3>6. Veri güvenliği</h3>
     <p>Uygulama ile Weather Underground hizmeti arasındaki tüm iletişim HTTPS/TLS ile şifrelenir. API anahtarı ve
       istasyon ayarları cihazın kendisinde güvenli şekilde saklanır.</p>
